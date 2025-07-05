@@ -750,27 +750,6 @@
             object-fit: cover;
         }
 
-        .help-cries-decoration {
-            position: absolute;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(193, 215, 235, 0.3) 0%, rgba(155, 184, 212, 0.2) 100%);
-            z-index: 1;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .help-cries-decoration.left {
-            left: 5%;
-            top: 20%;
-        }
-
-        .help-cries-decoration.right {
-            right: 5%;
-            bottom: 20%;
-            animation-delay: 1.5s;
-        }
-
         @keyframes float {
             0%, 100% {
                 transform: translateY(0px);
@@ -781,20 +760,23 @@
         }
 
         @media (max-width: 768px) {
-            .help-cries-decoration {
-                display: none;
-            }
-            
             .help-cries-section {
                 gap: 10px;
                 margin: 20px 0;
                 padding: 20px 20px;
             }
             
+            .help-cries-item {
+                gap: 10px;
+                width: calc((100% - 20px) / 3);
+            }
+            
             .help-cries-image {
-                width: 80px;
-                height: 80px;
-                max-width: none;
+                background-size: cover;
+            }
+
+            .help-cries-caption {
+                font-size: 0.8rem;
             }
             
             .testimonials-carousel {
@@ -1009,16 +991,6 @@
                         </ul>
                     </div>
 
-                    <!-- Изображения после плашки запросов -->
-                    <div class="help-cries-section">
-                        <div class="help-cries-decoration left"></div>
-                        <img src="./images/help-cries.png" alt="Кто обращается за помощью" class="help-cries-image">
-                        <img src="./images/help-cries.png" alt="Запросы клиентов" class="help-cries-image">
-                        <img src="./images/help-cries.png" alt="Направления работы" class="help-cries-image">
-                        <div class="help-cries-decoration right"></div>
-                    </div>
-                </div>
-
                 <div class="section">
                     <h2 class="section-title">Форматы работы и условия</h2>
                     
@@ -1095,13 +1067,14 @@
                     </div>
                 </div>
 
-                <div class="experience-section">
-                    <div class="experience-header" onclick="toggleExperience()">
-                        <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
-                        <div class="toggle-arrow" id="toggleArrow">▼</div>
-                    </div>
-                    <div class="experience-content" id="experienceContent">
-                        <div class="experience-full">
+                <div class="section">
+                    <div class="experience-section">
+                        <div class="experience-header" onclick="toggleExperience()">
+                            <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
+                            <div class="toggle-arrow" id="toggleArrow">▼</div>
+                        </div>
+                        <div class="experience-content" id="experienceContent">
+                            <div class="experience-full">
                             <div class="experience-item">
                                 <div class="experience-number">1.</div>
                                 <div class="experience-details">
@@ -1147,6 +1120,7 @@
                         <div class="experience-blur"></div>
                     </div>
                 </div>
+            </div>
 
                 <div class="section testimonials-section">
                     <h2 class="section-title">Отзывы о работе со мной</h2>
@@ -1246,9 +1220,19 @@
             if (content.classList.contains('expanded')) {
                 content.classList.remove('expanded');
                 arrow.classList.remove('rotated');
+                // Возвращаем ограниченную высоту
+                if (window.innerWidth <= 768) {
+                    content.style.maxHeight = '150px';
+                } else {
+                    content.style.maxHeight = '200px';
+                }
+                content.style.overflow = 'hidden';
             } else {
                 content.classList.add('expanded');
                 arrow.classList.add('rotated');
+                // Убираем все ограничения
+                content.style.maxHeight = 'none';
+                content.style.overflow = 'visible';
             }
         }
     </script>
