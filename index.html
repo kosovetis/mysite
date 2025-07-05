@@ -207,41 +207,63 @@
         }
 
         .content {
-            padding: 30px;
-            max-width: 840px;
-            margin: 0 auto;
+            padding: 0;
+            max-width: none;
+            margin: 0;
         }
 
         .section {
-            margin-bottom: 50px;
+            padding: 60px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section:nth-child(odd) {
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: white;
+        }
+
+        .about-section {
+            background: white;
+        }
+
+        .section + .section {
+            /* убираем границу */
         }
 
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 25px;
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
             position: relative;
-            padding-left: 20px;
+            padding-left: 0;
+            text-align: left;
+            line-height: 1.2;
         }
 
         .section-title::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
-            border-radius: 2px;
+            display: none;
+        }
+
+        .section-title::after {
+            display: none;
         }
 
         .experience-section {
-            margin-bottom: 50px;
+            margin-bottom: 0;
             background: #f8f9fa;
             border-radius: 15px;
             border: 1px solid #e2e8f0;
             overflow: hidden;
+            max-width: 840px;
+            margin: 0 auto;
         }
 
         .experience-header {
@@ -259,10 +281,14 @@
         }
 
         .experience-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2d3748;
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin: 0;
+            line-height: 1.2;
         }
 
         .toggle-arrow {
@@ -471,11 +497,34 @@
             font-weight: 600;
         }
 
+        .niche-tag {
+            background: #c1d7eb;
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
         .question-tags {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
             margin-top: 15px;
+        }
+
+        .question-tag {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .question-tag {
@@ -603,7 +652,7 @@
         }
 
         .testimonials-section {
-            margin-bottom: 50px;
+            margin-bottom: 0;
         }
 
         .testimonials-carousel {
@@ -728,8 +777,12 @@
                 padding: 10px;
             }
             
-            .content, .about-section {
+            .about-section {
                 padding: 20px;
+            }
+            
+            .section {
+                padding: 40px 20px;
             }
             
             .header {
@@ -769,7 +822,7 @@
             }
 
             .section-title {
-                font-size: 1.4rem;
+                font-size: 1.8rem;
             }
 
             .experience-header {
@@ -848,21 +901,21 @@
                     
                     <div class="client-examples">
                         <h4>С кем я уже работаю:</h4>
-                        <div class="examples-list">
-                            <div class="example-item">FMCG, beauty</div>
-                            <div class="example-item">действующие онлайн-школы</div>
-                            <div class="example-item">проекты на стадии пред-запуска</div>
-                            <div class="example-item">соло-эксперты, в том числе – начинающие и пока не начавшие</div>
-                            <div class="example-item">маркетологи</div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+                            <div class="niche-tag">FMCG</div>
+                            <div class="niche-tag">beauty</div>
+                            <div class="niche-tag">онлайн-школы</div>
+                            <div class="niche-tag">проекты на стадии предзапуска</div>
+                            <div class="niche-tag">соло-эксперты</div>
                         </div>
                     </div>
 
-                    <h4>Примеры запросов. Словами клиентов:</h4>
+                    <h4 style="font-size: 1.2rem; margin-top: 40px; margin-left: 25px;">Слово клиентам:</h4>
                     <div class="quotes-container">
                         <div class="quote-bubble">
                             <div class="quote-emoji">👩‍💼</div>
                             <div class="quote-message">
-                                Выйти из операционки, делегировать по максимуму задачи сотрудникам и не потерять в доходе
+                                Я хочу выйти из операционки, делегировать по максимуму задачи сотрудникам и не потерять в доходе
                             </div>
                         </div>
                         <div class="quote-bubble">
@@ -907,12 +960,6 @@
                             <div class="question-tag">"что делать в первую очередь?"</div>
                             <div class="question-tag">"как это сделать?"</div>
                             <div class="question-tag">"что делать дальше?"</div>
-                        </div>
-                        
-                        <div class="help-cries-section">
-                            <img src="./images/help-cries.png" alt="Крики о помощи" class="help-cries-image">
-                            <div class="help-cries-decoration left"></div>
-                            <div class="help-cries-decoration right"></div>
                         </div>
                     </div>
                 </div>
@@ -1063,7 +1110,7 @@
 
                 <div class="experience-section">
                     <div class="experience-header" onclick="toggleExperience()">
-                        <h3 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h3>
+                        <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
                         <div class="toggle-arrow" id="toggleArrow">▼</div>
                     </div>
                     <div class="experience-content" id="experienceContent">
@@ -1108,7 +1155,7 @@
                     </div>
                 </div>
 
-                <div class="contact-info">
+                <div class="contact-info" style="margin: 40px auto; max-width: 840px;">
                     <p><strong>Если вашего запроса в списке нет или вас терзают сомнения, смогу ли я вам помочь</strong></p>
                     <p style="margin-top: 15px;">
                         Пишите мне в Telegram: <a href="https://t.me/kosovetis" class="contact-link">@kosovetis</a>
