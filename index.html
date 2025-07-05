@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алина Косоветис - Консультант по маркетингу и бизнес-трекер</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     
     <!-- Мета-теги для превью в соцсетях -->
     <meta name="description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
@@ -107,6 +111,7 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            background: #f0f0f0;
         }
 
         .profile-image:hover {
@@ -213,7 +218,7 @@
         }
 
         .section {
-            padding: 60px 40px;
+            padding: 30px 40px;
             max-width: 900px;
             margin: 0 auto;
         }
@@ -727,6 +732,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             z-index: 2;
             position: relative;
+            background: #f0f0f0;
         }
 
         .help-cries-decoration {
@@ -782,7 +788,27 @@
             }
             
             .section {
-                padding: 40px 20px;
+                padding: 20px 20px;
+            }
+
+            /* "форматы работы" - уменьшаем */
+            .section:nth-child(2) {
+                padding-top: 15px;
+            }
+
+            /* "отзывы" - увеличиваем */
+            .section:nth-child(3) {
+                padding-top: 25px;
+            }
+
+            /* "откуда у меня опыт" - увеличиваем отступы */
+            .experience-section {
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+
+            .experience-header {
+                padding: 25px 20px 25px 20px;
             }
             
             .header {
@@ -826,15 +852,15 @@
             }
 
             .experience-header {
-                padding: 20px;
+                padding: 20px 20px 0 20px;
             }
 
             .experience-title {
-                font-size: 1.1rem;
+                font-size: 1.8rem;
             }
 
             .experience-content {
-                padding: 20px;
+                padding: 25px 20px 20px 20px;
             }
 
             .experience-item {
