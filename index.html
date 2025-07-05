@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
     <title>Алина Косоветис - Консультант по маркетингу и бизнес-трекер</title>
     
     <!-- Мета-теги для превью в соцсетях -->
@@ -12,9 +11,6 @@
     <!-- Open Graph для Facebook, VK, LinkedIn -->
     <meta property="og:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-трекер">
     <meta property="og:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
-    <meta property="og:image" content="./images/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://kosovetis.com">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ru_RU">
@@ -23,10 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-трекер">
     <meta name="twitter:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
-    <meta name="twitter:image" content="./images/og-image.png">
     
-    <!-- Telegram -->
-    <meta property="telegram:channel" content="@kosovetis">
     <style>
         * {
             margin: 0;
@@ -114,6 +107,13 @@
             border: 3px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
         }
 
         .profile-image:hover {
@@ -679,31 +679,42 @@
         }
 
         .help-cries-image {
-            max-width: 100%;
-            height: auto;
+            max-width: 60%;
+            height: 200px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             z-index: 2;
             position: relative;
+            background: linear-gradient(135deg, #f4f8fc 0%, #e8f2f9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d3748;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            border: 2px solid #c1d7eb;
         }
 
         .help-cries-decoration {
             position: absolute;
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: linear-gradient(135deg, rgba(193, 215, 235, 0.3) 0%, rgba(155, 184, 212, 0.2) 100%);
             z-index: 1;
+            animation: float 3s ease-in-out infinite;
         }
 
         .help-cries-decoration.left {
-            left: 10%;
+            left: 5%;
             top: 20%;
         }
 
         .help-cries-decoration.right {
-            right: 10%;
+            right: 5%;
             bottom: 20%;
+            animation-delay: 1.5s;
         }
 
         @keyframes float {
@@ -715,28 +726,13 @@
             }
         }
 
-        @media (min-width: 769px) {
-            .help-cries-image {
-                max-width: 60%;
-            }
-            
-            .help-cries-decoration {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .help-cries-decoration.left {
-                left: 5%;
-            }
-            
-            .help-cries-decoration.right {
-                right: 5%;
-            }
-        }
-
         @media (max-width: 768px) {
             .help-cries-decoration {
                 display: none;
+            }
+            
+            .help-cries-image {
+                max-width: 90%;
             }
             
             .testimonials-carousel {
@@ -826,9 +822,9 @@
             <div class="header">
                 <div class="header-content">
                     <div class="profile-photos">
-                        <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
-                        <img src="./images/profile-2.png" alt="Алина Косоветис" class="profile-image">
-                        <img src="./images/profile-3.png" alt="Алина Косоветис" class="profile-image">
+                        <div class="profile-image">Фото 1</div>
+                        <div class="profile-image">Фото 2</div>
+                        <div class="profile-image">Фото 3</div>
                     </div>
                     <div class="header-text">
                         <h1 class="name">Алина Косоветис</h1>
@@ -842,9 +838,9 @@
                         <div class="superpowers-section">
                             <div class="superpowers-title">⚡ Суперспособности:</div>
                             <div class="tag-blocks">
-                                <div class="tag-block">выстраивать структуру</div>
-                                <div class="tag-block">стартовать-что-угодно-с-0</div>
-                                <div class="tag-block">создавать креатив, который работает</div>
+                                <div class="tag-block">превращать хаос в структуру</div>
+                                <div class="tag-block">видеть возможности там, где другие видят тупик</div>
+                                <div class="tag-block">находить кратчайший путь от идеи до результата</div>
                             </div>
                         </div>
                     </div>
@@ -930,7 +926,7 @@
                         </div>
                         
                         <div class="help-cries-section">
-                            <img src="./images/help-cries.png" alt="Крики о помощи" class="help-cries-image">
+                            <div class="help-cries-image">Крики о помощи</div>
                             <div class="help-cries-decoration left"></div>
                             <div class="help-cries-decoration right"></div>
                         </div>
