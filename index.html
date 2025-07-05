@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Алина Косоветис - Консультант по маркетингу и бизнес-трекер</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
@@ -267,7 +267,7 @@
 
         .experience-section {
             margin-bottom: 0;
-            background: #f8f9fa;
+            background: white;
             border-radius: 15px;
             border: 1px solid #e2e8f0;
             overflow: hidden;
@@ -282,11 +282,11 @@
             padding: 25px;
             cursor: pointer;
             transition: all 0.3s ease;
-            background: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
+            background: white;
         }
 
         .experience-header:hover {
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            background: #f8f9fa;
         }
 
         .experience-title {
@@ -330,7 +330,7 @@
             left: 0;
             right: 0;
             height: 80px;
-            background: linear-gradient(to bottom, transparent 0%, rgba(248, 249, 250, 0.9) 70%, #f8f9fa 100%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 70%, white 100%);
             pointer-events: none;
             transition: opacity 0.3s ease;
             z-index: 1;
@@ -393,13 +393,18 @@
         }
 
         .achievement {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 243, 240, 0.8);
             padding: 10px 15px;
             border-radius: 8px;
             border-left: 3px solid #ec672d;
             color: #2d3748;
             font-weight: 500;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .achievement:nth-child(odd) {
+            background: rgba(244, 248, 252, 0.9);
+            border-left-color: #c1d7eb;
         }
 
         .client-examples {
@@ -975,22 +980,19 @@
                     </div>
 
                     <div class="highlight-box">
-                        <p><strong>Иными словами ко мне приходят<br>с запросами по:</strong></p>
-                        <ul style="margin-left: 20px; margin-top: 15px;">
-                            <li><span class="highlight-word">маркетингу:</span> продвижение, запуски, воронки, контент</li>
-                            <li><span class="highlight-word">продукту:</span> аудит текущих продуктов/услуг, выстраивание продуктовой линейки</li>
-                            <li><span class="highlight-word">построению отделов</span> в маркетинге: сотрудники, подрядчики, процессы, инструкции, аналитика</li>
-                            <li><span class="highlight-word">структурированию</span> бизнес-процессов</li>
-                            <li>оценке и <span class="highlight-word">улучшению</span> эффективности</li>
-                            <li><span class="highlight-word">развитию карьеры</span> в маркетинге</li>
+                        <p><strong>То есть ко мне приходят с запросами по:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
+                            <li style="margin-bottom: 15px;"><span class="highlight-word">Маркетингу</span><br>
+                            Разбираемся, как сделать так, чтобы о вас узнавали новые клиенты и не забывали старые. Ищем работающие связки, которые приносят прибыль.</li>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word">Продуктам и услугам</span><br>
+                            Анализируем, что именно вы продаете. Находим сильные стороны ваших продуктов, делаем их более понятными для клиента и эффективными для вас.</li>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word">Структуре и процессам</span><br>
+                            Помогаю перестать «тушить пожары» и начать работать системно, опираясь на план и целевые метрики.</li>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word">Развитию команды</span><br>
+                            Как организовать работу и помочь ключевым людям вырасти в настоящих профессионалов.</li>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word">Развитию бизнеса</span><br>
+                            Ответ на то самое: «что делать?», «за что хвататься?» и «куда дальше?». Ищем точки роста и строим план по достижению целей (даже самых амбициозных).</li>
                         </ul>
-                        <p style="margin-top: 15px;"><strong>А также с вопросами:</strong></p>
-                        <div class="question-tags">
-                            <div class="question-tag">"с чего начать"</div>
-                            <div class="question-tag">"что делать в первую очередь?"</div>
-                            <div class="question-tag">"как это сделать?"</div>
-                            <div class="question-tag">"что делать дальше?"</div>
-                        </div>
                     </div>
                 </div>
 
@@ -1038,7 +1040,7 @@
                         </div>
 
                         <div class="service-card premium">
-                            <h3 class="service-title">3. Бизнес-трекинг</h3>
+                            <h3 class="service-title">3. Бизнес-<span style="color: #ec672d;">трекинг</span></h3>
                             <p class="service-description">
                                 Полное погружение в ваш бизнес: вместе строим стратегию, переводим её в чёткий план действий и раз в одну или две недели сверяемся по результатам.<br>
                                 На созвонах разбираем успехи, ошибки и новые вопросы, корректируем курс и ставим задачи на следующий спринт.<br>
@@ -1067,6 +1069,59 @@
                                 Разберём ваш запрос, договоримся о деталях
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="experience-section">
+                    <div class="experience-header" onclick="toggleExperience()">
+                        <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
+                        <div class="toggle-arrow" id="toggleArrow">▼</div>
+                    </div>
+                    <div class="experience-content" id="experienceContent">
+                        <div class="experience-full">
+                            <div class="experience-item">
+                                <div class="experience-number">1.</div>
+                                <div class="experience-details">
+                                    <h4 class="experience-subtitle">Корпоративный фундамент</h4>
+                                    <div class="experience-company">MARS inc: FMCG-гигант</div>
+                                    <p>MARS научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
+                                    
+                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
+                                    <div class="experience-achievements">
+                                        <div class="achievement"><strong>Вывести на рынок новый продукт с нуля.</strong><br>
+                                        Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
+                                        <div class="achievement"><strong>Превратить хаос в структуру, сохраняя свободу и скорость.</strong><br>
+                                        Именно корпорация научила меня работать быстро и обходить жесткие (и долгие) процессы, установленные форматы работы и количество согласований. Мы используем это, чтобы ваш бизнес рос системно, при этом – не погряз в процессах и не терял динамику.</div>
+                                        <div class="achievement"><strong>Превратить репутацию в ваш бизнес-актив.</strong><br>
+                                        Я умею строить ее с нуля для новых брендов и устойчиво растить для уже существующих — так, чтобы она работала на ваш бизнес и защищала от рисков.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="experience-item">
+                                <div class="experience-number">2.</div>
+                                <div class="experience-details">
+                                    <h4 class="experience-subtitle">Startup boost</h4>
+                                    <div class="experience-company">Физикл: EdTech, фитнес</div>
+                                    <p>Я присоединилась к стартапу и стала частью команды, которая вырастила его в 10 раз. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который даровит рост бизнеса, а не просто «откручивает бюджет».</p>
+                                    
+                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">Что из этого мы сможем делать в вашем бизнесе:</p>
+                                    <div class="experience-achievements">
+                                        <div class="achievement"><strong>Строить прибыльный и управляемый маркетинг.</strong><br>
+                                        Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
+                                        <div class="achievement"><strong>Создавать системы, которые позволяют предсказуемо масштабироваться.</strong><br>
+                                        Я строила команды и процессы, которые обеспечивают стабильность при росте, а не втыкают палки в колеса. Мы создадим систему, которая не сломается, когда вы будете расти.</div>
+                                        <div class="achievement"><strong>Запускать новые направления и диверсифицировать бизнес.</strong><br>
+                                        Я знаю, как с нуля запустить проект на новом рынке или радикально новое направление для бизнеса. Помогу превратить вашу смелую идею в четкий план и довести его до результата.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p style="margin-top: 30px; margin-left: 55px; color: #4a5568; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
+                                Весь этот опыт — от залов совещаний в MARS до «окопов» стартапа в Физикле — я последние 2 года вкладываю в своих клиентов. Я работаю не просто как консультант, а как партнер, который помогает превращать смелые идеи в прибыльный результат и строить системы, которые выдерживают рост.
+                            </p>
+                        </div>
+                        <div class="experience-blur"></div>
                     </div>
                 </div>
 
@@ -1138,61 +1193,21 @@
                     </div>
                 </div>
 
-                <div class="experience-section">
-                    <div class="experience-header" onclick="toggleExperience()">
-                        <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
-                        <div class="toggle-arrow" id="toggleArrow">▼</div>
-                    </div>
-                    <div class="experience-content" id="experienceContent">
-                        <div class="experience-full">
-                            <div class="experience-item">
-                                <div class="experience-number">1.</div>
-                                <div class="experience-details">
-                                    <h4 class="experience-subtitle">Корпоративный фундамент</h4>
-                                    <div class="experience-company">MARS inc: FMCG-гигант</div>
-                                    <p>MARS научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
-                                    
-                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
-                                    <div class="experience-achievements">
-                                        <div class="achievement"><strong>Вывести на рынок новый продукт с нуля:</strong> Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
-                                        <div class="achievement"><strong>Превратить хаос в структуру, сохраняя свободу и скорость.</strong> Именно корпорация научила меня работать быстро и обходить жесткие (и долгие) процессы, установленные форматы работы и количество согласований. Мы используем это, чтобы ваш бизнес рос системно, при этом – не погряз в процессах и не терял динамику.</div>
-                                        <div class="achievement"><strong>Превращать репутацию в ваш бизнес-актив.</strong> Я умею строить ее с нуля с нуля для новых брендов и устойчиво растить для уже существующих — так, чтобы она работала на ваш бизнес и защищала от рисков.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="experience-item">
-                                <div class="experience-number">2.</div>
-                                <div class="experience-details">
-                                    <h4 class="experience-subtitle">Startup boost</h4>
-                                    <div class="experience-company">Физикл: EdTech, фитнес</div>
-                                    <p>Я присоединилась к стартапу и стала частью команды, которая вырастила его в 10 раз. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который даровит рост бизнеса, а не просто «откручивает бюджет».</p>
-                                    
-                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">Что из этого мы сможем делать в вашем бизнесе:</p>
-                                    <div class="experience-achievements">
-                                        <div class="achievement"><strong>Строить прибыльный и управляемый маркетинг.</strong> Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
-                                        <div class="achievement"><strong>Создавать системы, которые позволяют предсказуемо масштабироваться.</strong> Я строила команды и процессы, которые обеспечивают стабильность при росте, а не втыкают палки в колеса. Мы создадим систему, которая не сломается, когда вы будете расти.</div>
-                                        <div class="achievement"><strong>Запускать новые направления и диверсифицировать бизнес.</strong> Я знаю, как с нуля запустить проект на новом рынке или радикально новое направление для бизнеса. Помогу превратить вашу смелую идею в четкий план и довести его до результата.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 30px; margin-left: 55px; color: #4a5568; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
-                                Весь этот опыт — от залов совещаний в MARS до «окопов» стартапа в Физикле — я последние 2 года вкладываю в своих клиентов. Я работаю не просто как консультант, а как партнер, который помогает превращать смелые идеи в прибыльный результат и строить системы, которые выдерживают рост.
-                            </p>
-                        </div>
-                        <div class="experience-blur"></div>
-                    </div>
-                </div>
-
                 <div class="contact-info" style="margin: 40px auto; max-width: 840px;">
-                    <p><strong>Если вашего запроса в списке нет или вас терзают сомнения, смогу ли я вам помочь</strong></p>
+                    <p><strong>Если вы не увидели свой запрос на этом сайте или вас терзают сомнения, смогу ли я вам помочь</strong></p>
                     <p style="margin-top: 15px;">
                         Пишите мне в Telegram: <a href="https://t.me/kosovetis" class="contact-link">@kosovetis</a>
                     </p>
                     <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
-                        Если увижу, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
+                        Если пойму, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
                     </p>
+                </div>
+                
+                <!-- Фото в самом низу -->
+                <div style="display: flex; justify-content: center; gap: 15px; padding: 30px 0 40px 0;">
+                    <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
+                    <img src="./images/profile-2.png" alt="Алина Косоветис" class="profile-image">
+                    <img src="./images/profile-2.png" alt="Алина Косоветис" class="profile-image">
                 </div>
             </div>
         </div>
