@@ -1,15 +1,1103 @@
-<div class="experience-full">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <title>Алина Косоветис - Консультант по маркетингу и бизнес-трекер</title>
+    
+    <!-- Мета-теги для превью в соцсетях -->
+    <meta name="description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
+    
+    <!-- Open Graph для Facebook, VK, LinkedIn -->
+    <meta property="og:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-трекер">
+    <meta property="og:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
+    <meta property="og:image" content="./images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://kosovetis.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-трекер">
+    <meta name="twitter:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
+    <meta name="twitter:image" content="./images/og-image.png">
+    
+    <!-- Telegram -->
+    <meta property="telegram:channel" content="@kosovetis">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
+            color: white;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-photos {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3748;
+            padding: 12px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .tag-blocks {
+            display: flex;
+            gap: 8px;
+            margin: 15px 0 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .tag-block {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 4px 10px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .superpowers-section {
+            margin: 10px 0;
+        }
+
+        .superpowers-title {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .about-section {
+            padding: 30px;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .about-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .about-primary {
+            background: linear-gradient(135deg, #fff3f0 0%, #fce4dd 100%);
+            border: 2px solid #ec672d;
+            padding: 25px;
+            border-radius: 15px;
+            color: #2d3748;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(236, 103, 45, 0.15);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .about-secondary {
+            background: linear-gradient(135deg, #f4f8fc 0%, #e8f2f9 100%);
+            border: 2px solid #c1d7eb;
+            padding: 20px;
+            border-radius: 12px;
+            color: #2d3748;
+            font-weight: 500;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .content {
+            padding: 30px;
+            max-width: 840px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            border-radius: 2px;
+        }
+
+        .experience-section {
+            margin-bottom: 50px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f1f5f9 100%);
+        }
+
+        .experience-header:hover {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .toggle-arrow {
+            font-size: 1.2rem;
+            color: #ec672d;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+
+        .toggle-arrow.rotated {
+            transform: rotate(180deg);
+        }
+
+        .experience-content {
+            position: relative;
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            padding: 25px;
+        }
+
+        .experience-content.expanded {
+            max-height: 2000px;
+        }
+
+        .experience-blur {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent 0%, rgba(248, 249, 250, 0.9) 70%, #f8f9fa 100%);
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .experience-content.expanded .experience-blur {
+            opacity: 0;
+        }
+
+        .experience-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .experience-number {
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(236, 103, 45, 0.3);
+        }
+
+        .experience-details {
+            flex: 1;
+        }
+
+        .experience-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0 0 8px 0;
+        }
+
+        .experience-company {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ec672d;
+            margin-bottom: 12px;
+        }
+
+        .experience-details p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .experience-achievements {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .achievement {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 3px solid #ec672d;
+            color: #2d3748;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .client-examples {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .client-examples h4 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .examples-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .example-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ec672d;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .quotes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .quote-bubble {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .quote-emoji {
+            font-size: 1.5rem;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .quote-message {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 20px 20px 20px 5px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            font-style: italic;
+            color: #4a5568;
+            position: relative;
+            max-width: 85%;
+        }
+
+        .quote-message::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 15px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid white;
+            border-right: 8px solid transparent;
+            border-top: 8px solid white;
+            border-bottom: 8px solid transparent;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f4f8fc 0%, #e8f2f9 100%);
+            border: 2px solid #c1d7eb;
+            padding: 25px;
+            border-radius: 15px;
+            color: #2d3748;
+            font-weight: 500;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin: 20px 0 35px 0;
+        }
+
+        .highlight-word {
+            background: linear-gradient(120deg, rgba(255, 165, 0, 0.3) 0%, rgba(255, 140, 0, 0.2) 100%);
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        .question-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .question-tag {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card.premium {
+            border: 2px solid #ec672d;
+            box-shadow: 0 10px 25px rgba(193, 215, 235, 0.2), 0 0 20px rgba(193, 215, 235, 0.1);
+            background: linear-gradient(135deg, #f4f8fc 0%, #e8f2f9 100%);
+            position: relative;
+        }
+
+        .service-card.premium::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, #ec672d, #d64427);
+            border-radius: 17px;
+            z-index: -1;
+            filter: blur(6px);
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card.premium:hover::before {
+            opacity: 0;
+        }
+
+        .service-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: #4a5568;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .service-duration {
+            color: #ec672d;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+
+        .service-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 15px 0;
+        }
+
+        .service-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 400;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(236, 103, 45, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(236, 103, 45, 0.6);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            border-bottom-color: white;
+        }
+
+        .testimonials-section {
+            margin-bottom: 50px;
+        }
+
+        .testimonials-carousel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-emoji {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .testimonial-role {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ec672d;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: #4a5568;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .testimonial-text + .testimonial-text {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .testimonial-note {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .help-cries-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            padding: 20px 0;
+        }
+
+        .help-cries-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            position: relative;
+        }
+
+        .help-cries-decoration {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(193, 215, 235, 0.3) 0%, rgba(155, 184, 212, 0.2) 100%);
+            z-index: 1;
+        }
+
+        .help-cries-decoration.left {
+            left: 10%;
+            top: 20%;
+        }
+
+        .help-cries-decoration.right {
+            right: 10%;
+            bottom: 20%;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (min-width: 769px) {
+            .help-cries-image {
+                max-width: 60%;
+            }
+            
+            .help-cries-decoration {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .help-cries-decoration.left {
+                left: 5%;
+            }
+            
+            .help-cries-decoration.right {
+                right: 5%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .help-cries-decoration {
+                display: none;
+            }
+            
+            .testimonials-carousel {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        
+            .container {
+                padding: 10px;
+            }
+            
+            .content, .about-section {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-photos {
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .profile-image {
+                width: 60px;
+                height: 60px;
+                border-width: 2px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+            
+            .services-grid {
+                gap: 25px;
+            }
+
+            .quote-message {
+                max-width: 90%;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .experience-header {
+                padding: 20px;
+            }
+
+            .experience-title {
+                font-size: 1.1rem;
+            }
+
+            .experience-content {
+                padding: 20px;
+            }
+
+            .experience-item {
+                gap: 15px;
+            }
+
+            .experience-number {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+
+            .experience-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="header-content">
+                    <div class="profile-photos">
+                        <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
+                        <img src="./images/profile-2.png" alt="Алина Косоветис" class="profile-image">
+                        <img src="./images/profile-3.png" alt="Алина Косоветис" class="profile-image">
+                    </div>
+                    <div class="header-text">
+                        <h1 class="name">Алина Косоветис</h1>
+                        <p class="title">Консультант по маркетингу и бизнес-трекер<br><span style="color: #ec672d;">Нахожу точки роста и веду к результату</span></p>
+                        
+                        <div class="tag-blocks">
+                            <div class="tag-block">🧠 ENTP</div>
+                            <div class="tag-block">🚀 Changer</div>
+                        </div>
+
+                        <div class="superpowers-section">
+                            <div class="superpowers-title">⚡ Суперспособности:</div>
+                            <div class="tag-blocks">
+                                <div class="tag-block">выстраивать структуру</div>
+                                <div class="tag-block">стартовать-что-угодно-с-0</div>
+                                <div class="tag-block">создавать креатив, который работает</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="about-cards">
+                    <div class="about-primary">
+                        Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.
+                    </div>
+                    <div class="about-secondary">
+                        Фокусирую на главном, заряжаю энергией и вдохновением, даю уверенность и спокойствие.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="section">
+                    <h2 class="section-title">Кто и с чем ко мне обращается, и кому я наверняка буду полезна</h2>
+                    
+                    <div class="client-examples">
+                        <h4>С кем я уже работаю:</h4>
+                        <div class="examples-list">
+                            <div class="example-item">FMCG, beauty</div>
+                            <div class="example-item">действующие онлайн-школы</div>
+                            <div class="example-item">проекты на стадии пред-запуска</div>
+                            <div class="example-item">соло-эксперты, в том числе – начинающие и пока не начавшие</div>
+                            <div class="example-item">маркетологи</div>
+                        </div>
+                    </div>
+
+                    <h4>Примеры запросов. Словами клиентов:</h4>
+                    <div class="quotes-container">
+                        <div class="quote-bubble">
+                            <div class="quote-emoji">👩‍💼</div>
+                            <div class="quote-message">
+                                Выйти из операционки, делегировать по максимуму задачи сотрудникам и не потерять в доходе
+                            </div>
+                        </div>
+                        <div class="quote-bubble">
+                            <div class="quote-emoji">🤔</div>
+                            <div class="quote-message">
+                                Ищу прошаренного маркетолога кто сможет проконсультировать в выстраивании продвижения для продукта...
+                            </div>
+                        </div>
+                        <div class="quote-bubble">
+                            <div class="quote-emoji">📈</div>
+                            <div class="quote-message">
+                                Нам нужна помощь, куда идти, как привлечь людей, как повысить онлайн продажи
+                            </div>
+                        </div>
+                        <div class="quote-bubble">
+                            <div class="quote-emoji">🚀</div>
+                            <div class="quote-message">
+                                Нам сейчас интересно понять, куда развиваться дальше, как масштабироваться
+                            </div>
+                        </div>
+                        <div class="quote-bubble">
+                            <div class="quote-emoji">🏗️</div>
+                            <div class="quote-message">
+                                Хотим с вашей помощью построить отдел в маркетинге: сотрудники, процессы, инструкции, аналитика
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box">
+                        <p><strong>Иными словами ко мне приходят<br>с запросами по:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 15px;">
+                            <li><span class="highlight-word">маркетингу:</span> продвижение, запуски, воронки, контент</li>
+                            <li><span class="highlight-word">продукту:</span> аудит текущих продуктов/услуг, выстраивание продуктовой линейки</li>
+                            <li><span class="highlight-word">построению отделов</span> в маркетинге: сотрудники, подрядчики, процессы, инструкции, аналитика</li>
+                            <li><span class="highlight-word">структурированию</span> бизнес-процессов</li>
+                            <li>оценке и <span class="highlight-word">улучшению</span> эффективности</li>
+                            <li><span class="highlight-word">развитию карьеры</span> в маркетинге</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>А также с вопросами:</strong></p>
+                        <div class="question-tags">
+                            <div class="question-tag">"с чего начать"</div>
+                            <div class="question-tag">"что делать в первую очередь?"</div>
+                            <div class="question-tag">"как это сделать?"</div>
+                            <div class="question-tag">"что делать дальше?"</div>
+                        </div>
+                        
+                        <div class="help-cries-section">
+                            <img src="./images/help-cries.png" alt="Крики о помощи" class="help-cries-image">
+                            <div class="help-cries-decoration left"></div>
+                            <div class="help-cries-decoration right"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Форматы работы и условия</h2>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3 class="service-title">1. Экспресс-консультация</h3>
+                            <p class="service-description">
+                                <strong>Отличный вариант для небольших точечных запросов</strong><br>
+                                Например:
+                                <ul style="margin: 10px 0 0 20px;">
+                                    <li>аудит резюме или текста вакансии</li>
+                                    <li>обратная связь по тексту: для соцсетей, рассылок, посевов в tg, рекламы у блогеров</li>
+                                    <li>как организовать маркетинговое исследование: анализ рынков, CustDev, опрос, – и внедрить результаты этих исследований в работу</li>
+                                </ul>
+                            </p>
+                            <div class="service-duration">⏱️ Продолжительность: 30 минут</div>
+                            <div class="service-price">💰 $70 или 5500₽</div>
+                            <a href="https://calendly.com/kossovetis/meet-with-me" class="cta-button">Записаться</a>
+                        </div>
+
+                        <div class="service-card">
+                            <h3 class="service-title">2. Консультация <span style="color: #ec672d;">deep-dive</span></h3>
+                            <p class="service-description">
+                                <strong>Перед консультацией:</strong> готовлюсь, запрашиваю всю информацию, которая необходима для качественной встречи, тщательно изучаю и погружаюсь в ваш кейс<br>
+                                <strong>На консультации:</strong> отвечаю на все вопросы, даю рекомендации + делюсь всем тем, что не относилось к запросу напрямую, но было мной замечено в ходе подготовки<br>
+                                <strong>После:</strong> отвечаю на уточняющие вопросы по темам, которые мы разбирали на консультации
+                            </p>
+                            <div style="margin: 15px 0;">
+                                <strong>Консультация, как правило, состоит из трех основных блоков:</strong>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: #4a5568;">
+                                    <li>мои ответы на все ваши вопросы</li>
+                                    <li>рекомендации по дальнейшим шагам: <strong>что конкретно делать, чтобы получить тот результат, который вы хотите</strong></li>
+                                    <li>рекомендации по усилению площадок/материалов/процессов: соцсетей, сайтов, воронок, рекламных материалов, инструментов пре- и постанализа</li>
+                                </ul>
+                            </div>
+                            <div class="service-duration">⏱️ Продолжительность: 1,5 часа</div>
+                            <div class="service-price">💰 $290 или 23.000₽</div>
+                            <a href="https://t.me/kosovetis" class="cta-button">Обсудить формат</a>
+                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
+                                Разберём ваш запрос, договоримся о деталях
+                            </div>
+                        </div>
+
+                        <div class="service-card premium">
+                            <h3 class="service-title">3. Бизнес-трекинг</h3>
+                            <p class="service-description">
+                                Полное погружение в ваш бизнес: вместе строим стратегию, переводим её в чёткий план действий и раз в одну или две недели сверяемся по результатам.<br>
+                                На созвонах разбираем успехи, ошибки и новые вопросы, корректируем курс и ставим задачи на следующий спринт.<br>
+                                Между встречами я всегда на связи в чате, чтобы вы получали поддержку и ответы прямо по ходу работы.
+                            </p>
+                            <div style="margin: 15px 0; padding: 15px; background: linear-gradient(135deg, #fff3f0 0%, #fce4dd 100%); border-radius: 8px; border: 1px solid #fce4dd;">
+                                <strong>Примеры результата работы в таком формате:</strong>
+                                <ul style="margin-left: 20px; margin-top: 10px; color: #2d3748;">
+                                    <li>за первые 3 месяца увеличили ежемесячный доход на 80%</li>
+                                    <li>упорядочили продуктовую линейку, добавили формат, которого так не хватало, сейчас его доля в выручке 15%</li>
+                                    <li>настроили аналитику и процесс тестирования гипотез</li>
+                                    <li>нашли ответ на вопрос "что делать дальше", определились с приоритетами и стратегией развития, сфокусировались на самом важном</li>
+                                </ul>
+                            </div>
+                            <div class="service-duration">⏱️ Продолжительность каждой встречи: 1,5 часа</div>
+                            <div style="margin: 10px 0; color: #4a5568;">
+                                🔁 Периодичность встреч: еженедельно или раз в 2 недели<br>
+                                🗓️ Формат предполагает минимум 4 встречи
+                            </div>
+                            <div class="service-price">💰 от $190 или 15.000₽ за одну встречу</div>
+                            <div class="service-note" style="margin-top: 5px; font-style: italic;">
+                                Стоимость определяется в диалоге с вами в зависимости от вашего запроса и целей, а также от частоты встреч и продолжительности сотрудничества
+                            </div>
+                            <a href="https://t.me/kosovetis" class="cta-button" style="margin-top: 20px; display: inline-block;">Обсудить формат</a>
+                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
+                                Разберём ваш запрос, договоримся о деталях
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section testimonials-section">
+                    <h2 class="section-title">Отзывы о работе со мной</h2>
+                    
+                    <div class="testimonials-carousel">
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">💖</div>
+                            <div class="testimonial-role">Создательница бренда косметики</div>
+                            <div class="testimonial-note">после разовой консультации</div>
+                            <div class="testimonial-text">
+                                Супер! Спасибо большое! Очень было классно и полезно! И вообще по другому )) чувствуется, что ты все видишь и знаешь изнутри, а не в стиле смм после курса😂простигосподи
+                            </div>
+                            <div class="testimonial-text">
+                                Спасибо большое за поддержку! Мы разгребемся, найдем помощника, доделаем все что было нам дано в первый раз и придем к тебе опять)) и опять и опять)))
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">💖</div>
+                            <div class="testimonial-role">Создательница бренда косметики</div>
+                            <div class="testimonial-note">как понимаете, они пришли, и пришли уже на бизнес-трекинг</div>
+                            <div class="testimonial-text">
+                                Ты вообще наш компас! Если бы не ты – ничего бы не получилось. Классно, что ты можешь вернуть нас к нашей цели, не даешь распыляться. <...> Редко встретишь человека, который в проект всей душой вникается и вкладывается. Ты такой человек, что кажется что ты не просто консультант, маркетолог, а ты ещё наш партнер.
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">🥗</div>
+                            <div class="testimonial-role">Проект в нише health&wellbeing</div>
+                            <div class="testimonial-text">
+                                По поводу твоей вовлеченности у тебя она даже выше, чем мы ожидали! Я заметил, что мы часто что-то делаем вместе и работает это супер!
+                            </div>
+                            <div class="testimonial-text">
+                                Мне так спокойно стало после сессии с Алиной. Какой-то фундамент под ногами появился
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">👩‍⚕️</div>
+                            <div class="testimonial-role">Продюсер проекта в нише женского здоровья</div>
+                            <div class="testimonial-text">
+                                По запуску в итоге получилось $*, я считаю супер бомбический результат. спасибо огромное!
+                            </div>
+                            <div class="testimonial-note">*сумма под NDA</div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">💪</div>
+                            <div class="testimonial-role">Автор и главный эксперт фитнес-проекта</div>
+                            <div class="testimonial-text">
+                                Еще раз – спасибо тебе огромное!<br>
+                                Я бы куда-нибудь уехала кукухой и выгорела бы нах, если бы ты в том году не появилась
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-emoji">👩‍💼</div>
+                            <div class="testimonial-role">Founder&CEO крупнейшей онлайн-школы фитнеса</div>
+                            <div class="testimonial-text">
+                                Благодарю вас за ваш труд и вклад в нашу компанию 🙏 очень ценим вашу креативность
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="https://t.me/kosovetis" class="cta-button" style="font-size: 1.1rem; padding: 15px 30px;">Хочу с тобой работать</a>
+                    </div>
+                </div>
+
+                <div class="experience-section">
+                    <div class="experience-header" onclick="toggleExperience()">
+                        <h3 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h3>
+                        <div class="toggle-arrow" id="toggleArrow">▼</div>
+                    </div>
+                    <div class="experience-content" id="experienceContent">
+                        <div class="experience-full">
                             <div class="experience-item">
                                 <div class="experience-number">1.</div>
                                 <div class="experience-details">
                                     <h4 class="experience-subtitle">Корпоративный фундамент</h4>
                                     <div class="experience-company">MARS inc: FMCG-гигант</div>
-                                    <p>MARS научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
-                                    <p style="margin-top: 15px; margin-bottom: 10px; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
+                                    <p>В международной корпорации я научилась системному подходу, разработке маркетинговых стратегий и выводу на рынок продуктов для широкой аудитории.</p>
                                     <div class="experience-achievements">
-                                        <div class="achievement"><strong>Вывести на рынок новый продукт с нуля:</strong> Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
-                                        <div class="achievement"><strong>Превратить хаос в структуру, сохраняя свободу и скорость.</strong> Именно корпорация научила меня работать быстро и обходить жесткие (и долгие) процессы, установленные форматы работы и количество согласований. Мы используем это, чтобы ваш бизнес рос системно, при этом – не погряз в процессах и не терял динамику.</div>
-                                        <div class="achievement"><strong>Превращать репутацию в ваш бизнес-актив.</strong> Я умею строить ее с нуля для новых брендов и устойчиво растить для уже существующих — так, чтобы она работала на ваш бизнес и защищала от рисков.</div>
+                                        <div class="achievement">💡 Запустила с 0 новый продукт под брендом Коркунов</div>
+                                        <div class="achievement">♟️ Разработала digital стратегию для новых премиальных брендов</div>
+                                        <div class="achievement">🛡️ Управляла репутационным менеджментом категории</div>
                                     </div>
                                 </div>
                             </div>
@@ -19,17 +1107,50 @@
                                 <div class="experience-details">
                                     <h4 class="experience-subtitle">Startup boost</h4>
                                     <div class="experience-company">Физикл: EdTech, фитнес</div>
-                                    <p>Я присоединилась к стартапу и стала частью команды, которая вырастила его в 10 раз. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который дарит рост бизнеса, а не просто «откручивает бюджет».</p>
-                                    <p style="margin-top: 15px; margin-bottom: 10px; font-weight: 600; color: #2d3748;">Что из этого мы сможем делать в вашем бизнесе:</p>
+                                    <p>Из стартапа – в лидеры ниши. А я – от креатора до руководителя в маркетинге. Научилась быстро тестировать гипотезы и строить маркетинг, который напрямую растит бизнес.</p>
                                     <div class="experience-achievements">
-                                        <div class="achievement"><strong>Строить прибыльный и управляемый маркетинг.</strong> Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
-                                        <div class="achievement"><strong>Создавать системы, которые позволяют предсказуемо масштабироваться.</strong> Я строила команды и процессы, которые обеспечивают стабильность при росте, а не втыкают палки в колеса. Мы создадим систему, которая не сломается, когда вы будете расти.</div>
-                                        <div class="achievement"><strong>Запускать новые направления и диверсифицировать бизнес.</strong> Я знаю, как с нуля запустить проект на новом рынке или радикально новое направление для бизнеса. Помогу превратить вашу смелую идею в четкий план и довести его до результата.</div>
+                                        <div class="achievement">🚀 Запустила проект на англоязычном рынке с нуля</div>
+                                        <div class="achievement">📈 Вырастила ROMI воронки в 4 раза, CR посадочных – на 17%</div>
+                                        <div class="achievement">📱 Управляла маркетингом мобильных приложений: 47k установок, рейтинг 4,5 retention 72%</div>
+                                        <div class="achievement">✉️ Добавила +10% к продажам через e-mail маркетинг</div>
                                     </div>
                                 </div>
                             </div>
 
                             <p style="margin-top: 30px; margin-left: 55px; color: #4a5568; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
-                                Весь этот опыт — от залов совещаний в MARS до «окопов» стартапа в Физикле — я последние 2 года вкладываю в своих клиентов. Я работаю не просто как консультант, а как партнер, который помогает превращать смелые идеи в прибыльный результат и строить системы, которые выдерживают рост.
+                                Последние 2 года я применяю весь накопленный опыт в работе с моими клиентами. Помогаю им строить системный маркетинг, находить точки роста и добиваться конкретных результатов.
                             </p>
                         </div>
+                        <div class="experience-blur"></div>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <p><strong>Если вашего запроса в списке нет или вас терзают сомнения, смогу ли я вам помочь</strong></p>
+                    <p style="margin-top: 15px;">
+                        Пишите мне в Telegram: <a href="https://t.me/kosovetis" class="contact-link">@kosovetis</a>
+                    </p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
+                        Если увижу, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleExperience() {
+            const content = document.getElementById('experienceContent');
+            const arrow = document.getElementById('toggleArrow');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                arrow.classList.remove('rotated');
+            } else {
+                content.classList.add('expanded');
+                arrow.classList.add('rotated');
+            }
+        }
+    </script>
+</body>
+</html>
