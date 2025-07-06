@@ -265,86 +265,9 @@
             display: none;
         }
 
-        .experience-section {
-            margin-bottom: 0;
-            background: white;
-            border-radius: 15px;
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
-            max-width: 840px;
-            margin: 0 auto;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            background: white;
-        }
-
-        .experience-header:hover {
-            background: white;
-        }
-
-        .experience-title {
-            font-size: 2.4rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 0;
-            line-height: 1.2;
-        }
-
-        .toggle-arrow {
-            font-size: 1.2rem;
-            color: #ec672d;
-            font-weight: 600;
-            transition: transform 0.3s ease;
-            user-select: none;
-        }
-
-        .toggle-arrow.rotated {
-            transform: rotate(180deg);
-        }
-
-        .experience-content {
-            position: relative;
-            max-height: 200px;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            padding: 25px;
-        }
-
-        .experience-content.expanded {
-            max-height: 2000px;
-        }
-
-        .experience-blur {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.9) 70%, white 100%);
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .experience-content.expanded .experience-blur {
-            opacity: 0;
-        }
-
         .experience-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-            align-items: flex-start;
+            margin-bottom: 40px;
+            position: relative;
         }
 
         .experience-number {
@@ -353,17 +276,18 @@
             width: 35px;
             height: 35px;
             border-radius: 50%;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             font-weight: 600;
             font-size: 1.1rem;
-            flex-shrink: 0;
             box-shadow: 0 4px 15px rgba(236, 103, 45, 0.3);
+            margin-right: 12px;
+            vertical-align: middle;
         }
 
         .experience-details {
-            flex: 1;
+            margin-top: 15px;
         }
 
         .experience-subtitle {
@@ -371,6 +295,8 @@
             font-weight: 600;
             color: #2d3748;
             margin: 0 0 8px 0;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .experience-company {
@@ -874,16 +800,6 @@
             .section:nth-child(3) {
                 padding-top: 25px;
             }
-
-            /* "откуда у меня опыт" - увеличиваем отступы */
-            .experience-section {
-                margin-top: 25px;
-                margin-bottom: 25px;
-            }
-
-            .experience-header {
-                padding: 25px 20px 25px 20px;
-            }
             
             .header {
                 padding: 30px 20px;
@@ -925,20 +841,23 @@
                 font-size: 1.8rem;
             }
 
-            .experience-header {
-                padding: 20px 20px 0 20px;
-            }
-
-            .experience-title {
-                font-size: 1.8rem;
-            }
-
-            .experience-content {
-                padding: 25px 20px 20px 20px;
-            }
-
             .experience-item {
-                gap: 15px;
+                margin-bottom: 30px;
+            }
+
+            .experience-number {
+                width: 28px;
+                height: 28px;
+                font-size: 0.9rem;
+                margin-right: 8px;
+            }
+
+            .experience-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .experience-details {
+                margin-top: 10px;
             }
 
             .experience-number {
@@ -1078,6 +997,24 @@
                     </div>
                 </div>
 
+                <!-- Изображения процесса сотрудничества -->
+                <div class="process-images-section">
+                    <div class="process-images-container">
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">проводим диагностику</div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">совместно работаем</div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">подводим итоги</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="section">
                     <h2 class="section-title">Форматы работы и условия</h2>
                     
@@ -1173,59 +1110,72 @@
                 </div>
 
                 <div class="section">
-                    <div class="experience-section">
-                        <div class="experience-header" onclick="toggleExperience()">
-                            <h2 class="experience-title">Откуда у меня опыт, чтобы вам помогать</h2>
-                            <div class="toggle-arrow" id="toggleArrow">▼</div>
+                    <h2 class="section-title">Откуда у меня опыт, чтобы вам помогать</h2>
+                    
+                    <div class="experience-item">
+                        <div>
+                            <span class="experience-number">1.</span>
+                            <h4 class="experience-subtitle">Корпоративный фундамент</h4>
                         </div>
-                        <div class="experience-content" id="experienceContent">
-                            <div class="experience-full">
-                            <div class="experience-item">
-                                <div class="experience-number">1.</div>
-                                <div class="experience-details">
-                                    <h4 class="experience-subtitle">Корпоративный фундамент</h4>
-                                    <div class="experience-company">MARS inc: FMCG-гигант</div>
-                                    <p>MARS научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
-                                    
-                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
-                                    <div class="experience-achievements">
-                                        <div class="achievement"><strong>Вывести на рынок новый продукт с нуля.</strong><br>
-                                        Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
-                                        <div class="achievement"><strong>Превратить хаос в структуру, сохраняя свободу и скорость.</strong><br>
-                                        Именно корпорация научила меня работать быстро и обходить жесткие (и долгие) процессы, установленные форматы работы и количество согласований. Мы используем это, чтобы ваш бизнес рос системно, при этом – не погряз в процессах и не терял динамику.</div>
-                                        <div class="achievement"><strong>Превратить репутацию в ваш бизнес-актив.</strong><br>
-                                        Я умею строить ее с нуля для новых брендов и устойчиво растить для уже существующих — так, чтобы она работала на ваш бизнес и защищала от рисков.</div>
-                                    </div>
-                                </div>
+                        <div class="experience-details">
+                            <div class="experience-company">MARS inc: FMCG-гигант</div>
+                            <p>MARS научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
+                            
+                            <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
+                            <div class="experience-achievements">
+                                <div class="achievement"><strong>Вывести на рынок новый продукт с нуля.</strong><br>
+                                Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
+                                <div class="achievement"><strong>Превратить хаос в структуру, сохраняя свободу и скорость.</strong><br>
+                                Именно корпорация научила меня работать быстро и обходить жесткие (и долгие) процессы, установленные форматы работы и количество согласований. Мы используем это, чтобы ваш бизнес рос системно, при этом – не погряз в процессах и не терял динамику.</div>
+                                <div class="achievement"><strong>Превратить репутацию в ваш бизнес-актив.</strong><br>
+                                Я умею строить ее с нуля для новых брендов и устойчиво растить для уже существующих — так, чтобы она работала на ваш бизнес и защищала от рисков.</div>
                             </div>
-
-                            <div class="experience-item">
-                                <div class="experience-number">2.</div>
-                                <div class="experience-details">
-                                    <h4 class="experience-subtitle">Startup boost</h4>
-                                    <div class="experience-company">Физикл: EdTech, фитнес</div>
-                                    <p>Я присоединилась к стартапу и стала частью команды, которая вырастила его в 10 раз. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который даровит рост бизнеса, а не просто «откручивает бюджет».</p>
-                                    
-                                    <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">Что из этого мы сможем делать в вашем бизнесе:</p>
-                                    <div class="experience-achievements">
-                                        <div class="achievement"><strong>Строить прибыльный и управляемый маркетинг.</strong><br>
-                                        Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
-                                        <div class="achievement"><strong>Создавать системы, которые позволяют предсказуемо масштабироваться.</strong><br>
-                                        Я строила команды и процессы, которые обеспечивают стабильность при росте, а не втыкают палки в колеса. Мы создадим систему, которая не сломается, когда вы будете расти.</div>
-                                        <div class="achievement"><strong>Запускать новые направления и диверсифицировать бизнес.</strong><br>
-                                        Я знаю, как с нуля запустить проект на новом рынке или радикально новое направление для бизнеса. Помогу превратить вашу смелую идею в четкий план и довести его до результата.</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p style="margin-top: 30px; margin-left: 55px; color: #4a5568; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
-                                Весь этот опыт — от залов совещаний в MARS до «окопов» стартапа в Физикле — я последние 2 года вкладываю в своих клиентов. Я работаю не просто как консультант, а как партнер, который помогает превращать смелые идеи в прибыльный результат и строить системы, которые выдерживают рост.
-                            </p>
                         </div>
-                        <div class="experience-blur"></div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <span class="experience-number">2.</span>
+                            <h4 class="experience-subtitle">Startup boost</h4>
+                        </div>
+                        <div class="experience-details">
+                            <div class="experience-company">Физикл: EdTech, фитнес</div>
+                            <p>Я присоединилась к стартапу и стала частью команды, которая вырастила его в 10 раз. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который даровит рост бизнеса, а не просто «откручивает бюджет».</p>
+                            
+                            <p style="margin: 15px 0; font-weight: 600; color: #2d3748;">Что из этого мы сможем делать в вашем бизнесе:</p>
+                            <div class="experience-achievements">
+                                <div class="achievement"><strong>Строить прибыльный и управляемый маркетинг.</strong><br>
+                                Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
+                                <div class="achievement"><strong>Создавать системы, которые позволяют предсказуемо масштабироваться.</strong><br>
+                                Я строила команды и процессы, которые обеспечивают стабильность при росте, а не втыкают палки в колеса. Мы создадим систему, которая не сломается, когда вы будете расти.</div>
+                                <div class="achievement"><strong>Запускать новые направления и диверсифицировать бизнес.</strong><br>
+                                Я знаю, как с нуля запустить проект на новом рынке или радикально новое направление для бизнеса. Помогу превратить вашу смелую идею в четкий план и довести его до результата.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 30px; color: #4a5568; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
+                        Весь этот опыт — от залов совещаний в MARS до «окопов» стартапа в Физикле — я последние 2 года вкладываю в своих клиентов. Я работаю не просто как консультант, а как партнер, который помогает превращать смелые идеи в прибыльный результат и строить системы, которые выдерживают рост.
+                    </p>
+                </div>
+
+                <!-- Изображения процесса сотрудничества -->
+                <div class="process-images-section">
+                    <div class="process-images-container">
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">проводим диагностику</div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">совместно работаем</div>
+                        </div>
+                        <div class="process-item">
+                            <div class="process-image collaboration-image"></div>
+                            <div class="process-caption">подводим итоги</div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="section testimonials-section">
                     <h2 class="section-title">Отзывы о работе со мной</h2>
@@ -1316,30 +1266,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function toggleExperience() {
-            const content = document.getElementById('experienceContent');
-            const arrow = document.getElementById('toggleArrow');
-            
-            if (content.classList.contains('expanded')) {
-                content.classList.remove('expanded');
-                arrow.classList.remove('rotated');
-                // Возвращаем ограниченную высоту
-                if (window.innerWidth <= 768) {
-                    content.style.maxHeight = '150px';
-                } else {
-                    content.style.maxHeight = '200px';
-                }
-                content.style.overflow = 'hidden';
-            } else {
-                content.classList.add('expanded');
-                arrow.classList.add('rotated');
-                // Убираем все ограничения
-                content.style.maxHeight = 'none';
-                content.style.overflow = 'visible';
-                }
-        }
-    </script>
 </body>
 </html>
