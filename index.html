@@ -15,11 +15,13 @@
     <meta property="og:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
     <meta property="og:url" content="https://kosovetis.com">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/og-image.png">
     <meta property="og:locale" content="ru_RU">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-treker">
+    <meta name="twitter:title" content="Алина Косоветис - Консультант по маркетингу и бизнес-трекер">
     <meta name="twitter:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
+    <meta name="twitter:image" content="./images/og-image.png">
     
     <style>
         /* --- General Styles --- */
@@ -141,9 +143,16 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
+        
+        .superpowers-section {
+            margin: 10px 0;
+        }
 
-        .title-highlight {
-            color: #ec672d;
+        .superpowers-title {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2d3748;
+            margin-bottom: 8px;
         }
 
         /* --- Tags --- */
@@ -248,18 +257,50 @@
             font-size: 1.4rem;
             margin-bottom: 8px;
         }
+        
+        .mars-logo-container {
+            margin: 30px 0 2px 0;
+        }
+        
+        .mars-logo {
+             width: 100px;
+             max-width: 100%;
+             height: auto;
+        }
 
-        .experience-company {
-            font-size: 1rem;
-            font-weight: 500;
+        .physicle-logo {
+            width: 140px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .role-tags-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0 20px 0;
+        }
+        
+        .role-tag {
+            background: #c1d7eb;
             color: #2d3748;
-            margin-bottom: 12px;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-weight: 500;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .experience-details p {
             color: #4a5568;
             line-height: 1.6;
             margin-bottom: 15px;
+        }
+        
+        .experience-details .details-subtitle {
+            margin: 25px 0 20px 0;
+            font-weight: 600;
+            color: #2d3748;
         }
 
         .experience-achievements {
@@ -296,7 +337,7 @@
             border-radius: 15px;
             margin: 20px 0;
         }
-
+        
         .niche-tags-container {
             display: flex;
             gap: 10px;
@@ -367,10 +408,10 @@
         }
         
         .highlight-list {
-            margin-left: 20px;
+            margin-left: 0; /* Changed from 20px */
             margin-top: 15px;
             line-height: 1.8;
-            list-style: none; /* remove default bullets */
+            list-style-type: none;
             padding-left: 0;
         }
         
@@ -445,6 +486,8 @@
             color: #4a5568;
             line-height: 1.6;
             margin: 10px 0 0 20px;
+            list-style: disc;
+            padding-left: 0;
         }
         
         .service-details-list li, .service-details-list--secondary li { margin-bottom: 8px; }
@@ -460,7 +503,6 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(236, 103, 45, 0.4);
-            margin-top: 15px;
         }
 
         .cta-button:hover {
@@ -542,71 +584,18 @@
         }
 
         .process-image:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
-        .process-image--step1 { background-image: url('./images/process.png'); }
-        .process-image--step2 { background-image: url('./images/process.png'); }
-        .process-image--step3 { background-image: url('./images/process.png'); }
+        .process-image-1 { background-image: url('./images/process.png'); }
         .collaboration-image { background-image: url('./images/collaboration.png'); }
         .experience-image { background-image: url('./images/experience.png'); }
         .feedback-image { background-image: url('./images/feedback.png'); }
         .process-caption { font-size: 1rem; font-weight: 500; color: #6b7280; text-align: center; font-style: italic; }
 
-        /* --- Footer & Final CTA --- */
-        .final-cta-section {
-            text-align: center;
-            margin-top: 40px;
-        }
-        
-        .final-cta-button {
-            font-size: 1.1rem;
-            padding: 15px 30px;
-        }
-        
-        .final-contact-card {
-            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
-            color: white;
-            border: none;
-            margin: 40px 0 0;
-        }
-        
-        .final-contact-card p { margin-top: 15px; }
-        .final-contact-card p:first-child { margin-top: 0; }
-        .final-contact-card .contact-note { margin-top: 10px; font-size: 0.9rem; opacity: 0.9; }
-
-        .footer-photos {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 30px 0 40px 0;
-        }
-        
-        /* --- Utility classes created from inline styles --- */
-        .margin-top-20 { margin-top: 20px; }
-        .margin-top-25 { margin-top: 25px; }
-        .margin-top-40 { margin-top: 40px; }
-        .margin-left-25 { margin-left: 25px; }
-        .margin-bottom-8 { margin-bottom: 8px; }
-        .font-size-1-5rem { font-size: 1.5rem; }
-        .margin-10-0-15-0 { margin: 10px 0 15px 0; }
-        .margin-15-0-5-0 { margin: 15px 0 5px 0; }
-        .text-color-premium { color: #ec672d; }
-        .font-weight-600 { font-weight: 600; }
-        .disclaimer-note { font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic; }
-        .flex-container { display: flex; gap: 10px; flex-wrap: wrap; }
-        .role-tag { padding: 4px 10px; border-radius: 15px; font-weight: 500; font-size: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); background: #c1d7eb; color: #2d3748; }
-        .logo-image { max-width: 100%; height: auto; }
-        .mars-logo { width: 114px; }
-        .physicle-logo { width: 140px; }
-        
-        /* --- Refined section paddings/margins --- */
-        .section.services-section { padding-top: 10px; }
-        .section.testimonials-section { margin-bottom: 0; }
-
         /* --- Media Queries for Responsiveness --- */
         @media (max-width: 768px) {
             .container { padding: 10px; }
             .about-section, .section { padding: 20px; }
-            .section.services-section, .section:nth-of-type(2) { padding-top: 10px; }
-            .section.testimonials-section, .section:nth-of-type(3) { padding-top: 25px; }
+            .section:nth-of-type(2) { padding-top: 10px; }
+            .section:nth-of-type(3) { padding-top: 25px; }
             
             .header { padding: 30px 20px; }
             .header-content { flex-direction: column; align-items: flex-start; }
@@ -643,7 +632,7 @@
                     </div>
                     <div class="header-text">
                         <h1 class="name">Алина Косоветис</h1>
-                        <p class="title">Консультант по маркетингу и бизнес-трекер<br><span class="title-highlight">Нахожу точки роста и веду к результату</span></p>
+                        <p class="title">Консультант по маркетингу и бизнес-трекер<br><span style="color: #ec672d;">Нахожу точки роста и веду к результату</span></p>
                         
                         <div class="tag-blocks">
                             <div class="tag-block">🧠 ENTP</div>
@@ -651,7 +640,7 @@
                         </div>
 
                         <div class="superpowers-section">
-                            <div class="superpowers-title">⚡ Суперспособности:</div>
+                            <div class="superpowers-title"><strong>⚡ Суперспособности:</strong></div>
                             <div class="tag-blocks">
                                 <div class="tag-block">превращать хаос в структуру</div>
                                 <div class="tag-block">видеть возможности там, где другие видят тупик</div>
@@ -687,8 +676,8 @@
                             <div class="niche-tag">Health&Wellbeing</div>
                             <div class="niche-tag">Mental Health</div>
                         </div>
-                        <div class="margin-top-25" style="font-size: 0.95rem; color: #6b7280; line-height: 1.6;">
-                            <div class="margin-bottom-8">
+                        <div style="margin-top: 25px; font-size: 0.95rem; color: #6b7280; line-height: 1.6;">
+                            <div style="margin-bottom: 8px;">
                                 <strong style="color: #2d3748;">масштаб:</strong> от соло-экспертов до лидеров ниши
                             </div>
                             <div>
@@ -697,7 +686,7 @@
                         </div>
                     </div>
 
-                    <h4 class="section-subtitle margin-top-40 margin-left-25">Слово клиентам:</h4>
+                    <h4 class="section-subtitle" style="margin-top: 40px; margin-left: 25px;">Слово клиентам:</h4>
                     <div class="quotes-container">
                         <div class="quote-bubble">
                             <div class="quote-emoji">📈</div>
@@ -734,15 +723,15 @@
                     <div class="highlight-box">
                         <h4 class="section-subtitle">То есть ко мне приходят с запросами по:</h4>
                         <ul class="highlight-list">
-                            <li><span class="highlight-word-orange">Маркетингу</span><br>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Маркетингу</span><br>
                             Разбираемся, как сделать так, чтобы о вас узнавали новые клиенты и не забывали старые. Ищем работающие связки, которые приносят прибыль.</li>
-                            <li><span class="highlight-word-orange">Продуктам и услугам</span><br>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Продуктам и услугам</span><br>
                             Анализируем, что именно вы продаете. Находим сильные стороны ваших продуктов, делаем их более понятными для клиента и эффективными для вас.</li>
-                            <li><span class="highlight-word-orange">Развитию команды</span><br>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Развитию команды</span><br>
                             Как организовать работу и помочь ключевым людям вырасти в настоящих профессионалов.</li>
-                            <li><span class="highlight-word-orange">Структуре и процессам</span><br>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Структуре и процессам</span><br>
                             Помогаю перестать «тушить пожары» и начать работать системно, опираясь на план и целевые метрики.</li>
-                            <li><span class="highlight-word-orange">Развитию бизнеса</span><br>
+                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Развитию бизнеса</span><br>
                             Ответ на то самое: «что делать?», «за что хвататься?» и «куда дальше?». Ищем точки роста и строим план по достижению целей (даже самых амбициозных).</li>
                         </ul>
                     </div>
@@ -751,31 +740,31 @@
                 <div class="process-images-section">
                     <div class="process-images-container">
                         <div class="process-item">
-                            <div class="process-image process-image--step1"></div>
+                            <div class="process-image process-image-1"></div>
                             <div class="process-caption">изучаю<br>запрос</div>
                         </div>
                         <div class="process-item">
-                            <div class="process-image process-image--step2"></div>
+                            <div class="process-image process-image-1"></div>
                             <div class="process-caption">провожу<br>исследование</div>
                         </div>
                         <div class="process-item">
-                            <div class="process-image process-image--step3"></div>
+                            <div class="process-image process-image-1"></div>
                             <div class="process-caption">анализирую<br>метрики</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="section services-section">
+                <div class="section">
                     <h2 class="section-title">Форматы работы и условия</h2>
                     
                     <div class="services-grid">
                         <div class="service-card">
                             <h3 class="service-title">1. Экспресс-консультация</h3>
-                            <div class="font-size-1-5rem margin-10-0-15-0">⏱️ 📍 🌪️</div>
+                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">⏱️ 📍 🌪️</div>
                             <p class="service-description">
                                 <strong>Отличный вариант для небольших точечных запросов</strong>
                             </p>
-                            <p class="margin-15-0-5-0">Например:</p>
+                            <p style="margin: 15px 0 5px 0;">Например:</p>
                             <ul class="service-details-list">
                                 <li>аудит резюме или текста вакансии</li>
                                 <li>обратная связь по тексту: для соцсетей, рассылок, посевов в tg, рекламы у блогеров</li>
@@ -787,50 +776,50 @@
                         </div>
 
                         <div class="service-card">
-                            <h3 class="service-title">2. Консультация <span class="text-color-premium">deep-dive</span></h3>
-                            <div class="font-size-1-5rem margin-10-0-15-0">🔍 🤿 💡</div>
+                            <h3 class="service-title">2. Консультация <span style="color: #ec672d;">deep-dive</span></h3>
+                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">🔍 🤿 💡</div>
                             <p class="service-description">
                                 <strong>Глубокое погружение в вашу задачу для поиска наилучшего решения.</strong>
                             </p>
-                            <p class="service-description margin-top-20">
+                            <p class="service-description" style="margin-top: 20px;">
                                 <strong>Этот формат для вас, если нужно:</strong>
                             </p>
                             <ul class="service-details-list--secondary">
-                                <li>Определить вектор развития и найти ответы на вопросы «куда идти?» и «как привлекать клиентов?».</li>
-                                <li>Найти конкретные способы увеличить продажи и повысить эффективность маркетинга.</li>
-                                <li>Провести аудит ваших маркетинговых каналов и активностей, чтобы понять, что работает, а что — нет.</li>
-                                <li>Проанализировать текущие процессы в команде и получить рекомендации по их улучшению.</li>
-                                <li>Получить независимую экспертизу и второе мнение по вашему плану действий.</li>
+                                <li style="margin-bottom: 8px;">Определить вектор развития и найти ответы на вопросы «куда идти?» и «как привлекать клиентов?».</li>
+                                <li style="margin-bottom: 8px;">Найти конкретные способы увеличить продажи и повысить эффективность маркетинга.</li>
+                                <li style="margin-bottom: 8px;">Провести аудит ваших маркетинговых каналов и активностей, чтобы понять, что работает, а что — нет.</li>
+                                <li style="margin-bottom: 8px;">Проанализировать текущие процессы в команде и получить рекомендации по их улучшению.</li>
+                                <li style="margin-bottom: 8px;">Получить независимую экспертизу и второе мнение по вашему плану действий.</li>
                             </ul>
-                            <p class="service-description margin-top-20">
+                            <p class="service-description" style="margin-top: 20px;">
                                 <strong>В результате вы получите:</strong>
                             </p>
                             <ul class="service-details-list--secondary">
-                                <li>Полное понимание, как решить ваш запрос, и что для этого нужно сделать.</li>
-                                <li><strong>Пошаговый план действий,</strong> который можно сразу брать в работу.</li>
-                                <li>Ответы на все ваши вопросы и уверенность в дальнейших шагах.</li>
+                                <li style="margin-bottom: 8px;">Полное понимание, как решить ваш запрос, и что для этого нужно сделать.</li>
+                                <li style="margin-bottom: 8px;"><strong>Пошаговый план действий,</strong> который можно сразу брать в работу.</li>
+                                <li style="margin-bottom: 8px;">Ответы на все ваши вопросы и уверенность в дальнейших шагах.</li>
                             </ul>
-                            <p class="service-description margin-top-20">
+                            <p class="service-description" style="margin-top: 20px;">
                                 <strong>Как проходит работа:</strong> я заранее погружаюсь в ваш проект, а на встрече мы сфокусированно работаем над решением. После консультации я остаюсь на связи, чтобы ответить на уточняющие вопросы.
                             </p>
                             <div class="service-duration">⏱️ Продолжительность: 1,5 часа</div>
                             <div class="service-price">💰 $290 или 23.000₽</div>
                             <a href="https://t.me/kosovetis" class="cta-button">Обсудить формат</a>
-                            <div class="disclaimer-note">
+                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
                                 Разберём ваш запрос, договоримся о деталях
                             </div>
                         </div>
 
                         <div class="service-card premium">
-                            <h3 class="service-title">3. Бизнес-<span class="text-color-premium">трекинг</span></h3>
-                            <div class="font-size-1-5rem margin-10-0-15-0">🤝 🚀 🎯</div>
+                            <h3 class="service-title">3. Бизнес-<span style="color: #ec672d;">трекинг</span></h3>
+                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">🤝 🚀 🎯</div>
                             <p class="service-description">
                                 <strong>Полноценно участвую в развитии вашего бизнеса:</strong> вместе строим стратегию, переводим её в чёткий план действий и раз в одну или две недели сверяемся по результатам.
                             </p>
-                            <p class="service-description margin-top-20">
+                            <p class="service-description" style="margin-top: 20px;">
                                 На <strong>регулярных встречах</strong> разбираем успехи, ошибки и новые вопросы, корректируем курс и ставим задачи на следующий спринт.
                             </p>
-                            <p class="service-description margin-top-20">
+                            <p class="service-description" style="margin-top: 20px;">
                                 Между встречами <strong>я остаюсь на связи в чате,</strong> чтобы вы получали поддержку и ответы прямо по ходу работы.
                             </p>
                             <div style="margin: 15px 0; padding: 15px; background: linear-gradient(135deg, #fff3f0 0%, #fce4dd 100%); border-radius: 8px; border: 1px solid #fce4dd;">
@@ -847,14 +836,14 @@
                                 🔁 Периодичность встреч: еженедельно или раз в 2 недели
                             </div>
                             <div style="margin: 15px 0; color: #4a5568;">
-                                🗓️ Формат предполагает <span class="text-color-premium font-weight-600">минимум 4 встречи</span>
+                                🗓️ Формат предполагает <span style="color: #ec672d; font-weight: 600;">минимум 4 встречи</span>
                             </div>
                             <div class="service-price">💰 от $190 или 15.000₽ за одну встречу</div>
                             <div class="service-note" style="margin-top: 5px; font-style: italic;">
                                 Стоимость определяется в диалоге с вами в зависимости от вашего запроса и целей, а также от частоты встреч и продолжительности сотрудничества
                             </div>
-                            <a href="https://t.me/kosovetis" class="cta-button margin-top-20">Обсудить формат</a>
-                            <div class="disclaimer-note">
+                            <a href="https://t.me/kosovetis" class="cta-button" style="margin-top: 20px; display: inline-block;">Обсудить формат</a>
+                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
                                 Разберём ваш запрос, договоримся о деталях
                             </div>
                         </div>
@@ -883,17 +872,17 @@
                     
                     <div class="experience-item">
                         <h4 class="section-subtitle"><span class="highlight-word-blue">1. Корпоративный фундамент</span></h4>
-                        <div class="margin-20-0-2-0">
-                            <img src="./images/mars-logo.png" alt="Логотип MARS" class="logo-image mars-logo">
+                        <div class="mars-logo-container">
+                            <img src="./images/mars-logo.png" alt="Логотип MARS" class="mars-logo">
                         </div>
-                        <div class="flex-container" style="margin: 15px 0 20px 0;">
+                        <div class="role-tags-container">
                             <div class="role-tag">brand manager Коркунов</div>
                             <div class="role-tag">digital marketing manager Petcare</div>
                         </div>
                         <div class="experience-details">
                             <p>Этот FMCG-гигант научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
                             
-                            <p style="margin: 25px 0 20px 0; font-weight: 600; color: #2d3748;">И теперь я могу помочь вашему бизнесу:</p>
+                            <p class="details-subtitle">И теперь я могу помочь вашему бизнесу:</p>
                             <div class="experience-achievements">
                                 <div class="achievement"><strong>🚀 Вывести на рынок новый продукт с нуля.</strong><br><br>
                                 Я знаю, как провести идею через все этапы — от исследования рынка до попадания в корзину потребителя — даже в самых сложных условиях.</div>
@@ -907,17 +896,17 @@
 
                     <div class="experience-item">
                         <h4 class="section-subtitle"><span class="highlight-word-blue">2. Startup boost</span></h4>
-                        <div class="margin-20-0-2-0">
-                            <img src="./images/logo.svg" alt="Логотип" class="logo-image physicle-logo">
+                        <div style="margin: 20px 0 2px 0;">
+                            <img src="./images/logo.svg" alt="Логотип" class="physicle-logo">
                         </div>
-                        <div class="flex-container" style="margin: 15px 0 20px 0;">
+                        <div class="role-tags-container">
                             <div class="role-tag">deputy CMO</div>
                             <div class="role-tag">creative director</div>
                         </div>
                         <div class="experience-details">
                             <p>Я присоединилась к EdTech стартапу и стала частью команды, которая <strong>вырастила его в 10 раз</strong>. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который драйвит рост бизнеса, а не просто «откручивает бюджет».</p>
                             
-                            <p style="margin: 25px 0 20px 0; font-weight: 600; color: #2d3748;">Что мы сможем сделать в вашем бизнесе:</p>
+                            <p class="details-subtitle">Что мы сможем сделать в вашем бизнесе:</p>
                             <div class="experience-achievements">
                                 <div class="achievement"><strong>📈 Строить прибыльный и управляемый маркетинг.</strong><br><br>
                                 Маркетинг — это система, а не "креативный хаос". Мы выстроим подход, который позволит принимать решения на основе цифр, а не интуиции.</div>
@@ -1034,21 +1023,23 @@
                         </div>
                     </div>
                     
-                    <div class="final-cta-section">
-                        <a href="https://t.me/kosovetis" class="cta-button final-cta-button">Хочу с тобой работать</a>
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="https://t.me/kosovetis" class="cta-button" style="font-size: 1.1rem; padding: 15px 30px;">Хочу с тобой работать</a>
                     </div>
                     
-                    <div class="service-card final-contact-card">
-                        <p><strong>Если вы не увидели свой запрос на этом сайте или вас терзают сомнения, смогу ли я вам помочь</strong></p>
-                        <p>
-                            Пишите мне в Telegram: <a href="https://t.me/kosovetis" class="contact-link">@kosovetis</a>
-                        </p>
-                        <p class="contact-note">
-                            Если пойму, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
-                        </p>
+                    <div style="margin: 40px 0 0;">
+                        <div class="service-card" style="background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%); color: white; border: none;">
+                            <p><strong>Если вы не увидели свой запрос на этом сайте или вас терзают сомнения, смогу ли я вам помочь</strong></p>
+                            <p style="margin-top: 15px;">
+                                Пишите мне в Telegram: <a href="https://t.me/kosovetis" style="color: white; text-decoration: none; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.3); transition: border-color 0.3s ease;">@kosovetis</a>
+                            </p>
+                            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
+                                Если пойму, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="footer-photos">
+                    <div style="display: flex; justify-content: center; gap: 15px; padding: 30px 0 40px 0;">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
