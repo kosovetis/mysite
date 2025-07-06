@@ -250,6 +250,13 @@
             line-height: 1.2;
         }
 
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0 0 15px 0;
+        }
+
         .section-title::before {
             display: none;
         }
@@ -283,13 +290,10 @@
             margin-top: 15px;
         }
 
-        .experience-subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin: 0 0 8px 0;
+        .experience-details .section-subtitle {
             display: inline-block;
             vertical-align: middle;
+            margin-bottom: 8px;
         }
 
         .experience-company {
@@ -331,12 +335,6 @@
             padding: 25px;
             border-radius: 15px;
             margin: 20px 0;
-        }
-
-        .client-examples h4 {
-            color: #2d3748;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
         }
 
         .examples-list {
@@ -422,6 +420,10 @@
             line-height: 1.7;
             margin: 20px 0 35px 0;
         }
+        
+        .highlight-box .section-subtitle {
+            margin-bottom: 15px; /* Уточняем отступ для подзаголовка внутри бокса */
+        }
 
         .highlight-word {
             background: linear-gradient(120deg, rgba(255, 165, 0, 0.3) 0%, rgba(255, 140, 0, 0.2) 100%);
@@ -446,18 +448,6 @@
             gap: 10px;
             flex-wrap: wrap;
             margin-top: 15px;
-        }
-
-        .question-tag {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            color: #2d3748;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .question-tag {
@@ -845,12 +835,8 @@
                 margin-right: 8px;
             }
 
-            .experience-subtitle {
+            .experience-details .section-subtitle {
                 font-size: 1.05rem;
-            }
-
-            .experience-details {
-                margin-top: 10px;
             }
 
             .experience-number {
@@ -859,7 +845,7 @@
                 font-size: 1rem;
             }
 
-            .experience-subtitle {
+            .experience-details .section-subtitle {
                 font-size: 1.1rem;
             }
         }
@@ -913,7 +899,7 @@
                     <h2 class="section-title">Кто и с чем ко мне обращается, и кому я наверняка буду полезна</h2>
                     
                     <div class="client-examples">
-                        <h4>С кем я уже работаю:</h4>
+                        <h4 class="section-subtitle">С кем я уже работаю:</h4>
                         <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
                             <div class="niche-tag">FMCG</div>
                             <div class="niche-tag">beauty</div>
@@ -923,7 +909,7 @@
                         </div>
                     </div>
 
-                    <h4 style="font-size: 1.2rem; margin-top: 40px; margin-left: 25px;">Слово клиентам:</h4>
+                    <h4 class="section-subtitle" style="margin-top: 40px; margin-left: 25px;">Слово клиентам:</h4>
                     <div class="quotes-container">
                         <div class="quote-bubble">
                             <div class="quote-emoji">👩‍💼</div>
@@ -958,7 +944,7 @@
                     </div>
 
                     <div class="highlight-box">
-                        <p><strong>То есть ко мне приходят с запросами по:</strong></p>
+                        <h4 class="section-subtitle">То есть ко мне приходят с запросами по:</h4>
                         <ul style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
                             <li style="margin-bottom: 15px;"><span class="highlight-word">Маркетингу</span><br>
                             Разбираемся, как сделать так, чтобы о вас узнавали новые клиенты и не забывали старые. Ищем работающие связки, которые приносят прибыль.</li>
@@ -1090,7 +1076,7 @@
                     <div class="experience-item">
                         <div>
                             <span class="experience-number">1.</span>
-                            <h4 class="experience-subtitle">Корпоративный фундамент</h4>
+                            <h4 class="section-subtitle">Корпоративный фундамент</h4>
                         </div>
                         <div class="experience-details">
                             <div class="experience-company">MARS inc: FMCG-гигант</div>
@@ -1111,7 +1097,7 @@
                     <div class="experience-item">
                         <div>
                             <span class="experience-number">2.</span>
-                            <h4 class="experience-subtitle">Startup boost</h4>
+                            <h4 class="section-subtitle">Startup boost</h4>
                         </div>
                         <div class="experience-details">
                             <div class="experience-company">Физикл: EdTech, фитнес</div>
