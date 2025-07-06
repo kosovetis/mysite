@@ -22,6 +22,7 @@
     <meta name="twitter:description" content="Нахожу точки роста и веду к результату. Помогаю бизнесу, онлайн-школам и соло-экспертам расти, развиваться и становиться эффективнее.">
     
     <style>
+        /* --- General Styles --- */
         * {
             margin: 0;
             padding: 0;
@@ -61,7 +62,8 @@
                 transform: translateY(0);
             }
         }
-
+        
+        /* --- Header --- */
         .header {
             background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
             color: white;
@@ -93,7 +95,7 @@
             align-items: center;
             gap: 20px;
         }
-
+        
         .profile-photos {
             display: flex;
             gap: 15px;
@@ -140,6 +142,11 @@
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
+        .title-highlight {
+            color: #ec672d;
+        }
+
+        /* --- Tags --- */
         .tag-blocks {
             display: flex;
             gap: 8px;
@@ -159,17 +166,40 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .superpowers-section {
-            margin: 10px 0;
+        /* --- Sections & Content --- */
+        .content {
+            padding: 0;
+            max-width: none;
+            margin: 0;
+        }
+        
+        .section {
+            padding: 30px 40px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .superpowers-title {
-            font-size: 0.8rem;
-            font-weight: 500;
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 0;
+            text-align: left;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #2d3748;
-            margin-bottom: 8px;
+            margin: 0 0 15px 0;
         }
-
+        
         .about-section {
             padding: 30px 40px;
             background: white;
@@ -208,63 +238,7 @@
             line-height: 1.6;
         }
 
-        .content {
-            padding: 0;
-            max-width: none;
-            margin: 0;
-        }
-
-        .section {
-            padding: 30px 40px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .section:nth-of-type(2) {
-            padding-top: 10px; /* "форматы работы" - еще больше уменьшаем отступ в десктопе */
-        }
-
-        .section:nth-child(odd) {
-            background: white;
-        }
-
-        .section:nth-child(even) {
-            background: white;
-        }
-
-        .about-section {
-            background: white;
-        }
-
-        .section-title {
-            font-size: 2.4rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 40px;
-            position: relative;
-            padding-left: 0;
-            text-align: left;
-            line-height: 1.2;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin: 0 0 15px 0;
-        }
-
-        .section-title::before {
-            display: none;
-        }
-
-        .section-title::after {
-            display: none;
-        }
-
+        /* --- Experience Section --- */
         .experience-item {
             margin-bottom: 40px;
             position: relative;
@@ -314,7 +288,8 @@
             background: rgba(244, 248, 252, 0.9);
             border-left-color: #c1d7eb;
         }
-
+        
+        /* --- Client Examples & Quotes --- */
         .client-examples {
             background: #f8f9fa;
             padding: 25px;
@@ -322,21 +297,24 @@
             margin: 20px 0;
         }
 
-        .examples-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
+        .niche-tags-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
         }
-
-        .example-item {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #ec672d;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        
+        .niche-tag {
+            background: #c1d7eb;
+            color: #2d3748;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
+        
         .quotes-container {
             display: flex;
             flex-direction: column;
@@ -352,14 +330,8 @@
         }
 
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         .quote-emoji {
@@ -367,7 +339,7 @@
             margin-top: 5px;
             flex-shrink: 0;
         }
-
+        
         .quote-message {
             background: white;
             padding: 15px 20px;
@@ -380,19 +352,7 @@
             max-width: 85%;
         }
 
-        .quote-message::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 15px;
-            width: 0;
-            height: 0;
-            border-left: 8px solid white;
-            border-right: 8px solid transparent;
-            border-top: 8px solid white;
-            border-bottom: 8px solid transparent;
-        }
-
+        /* --- Highlight & Lists --- */
         .highlight-box {
             background: linear-gradient(135deg, #f4f8fc 0%, #e8f2f9 100%);
             border: 2px solid #c1d7eb;
@@ -406,17 +366,18 @@
             margin: 20px 0 35px 0;
         }
         
-        .highlight-box .section-subtitle {
-            margin-bottom: 15px; /* Уточняем отступ для подзаголовка внутри бокса */
+        .highlight-list {
+            margin-left: 20px;
+            margin-top: 15px;
+            line-height: 1.8;
+            list-style: none; /* remove default bullets */
+            padding-left: 0;
         }
-
-        .highlight-word {
-            background: linear-gradient(120deg, rgba(193, 215, 235, 0.4) 0%, rgba(155, 184, 212, 0.3) 100%);
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: 600;
+        
+        .highlight-list li {
+            margin-bottom: 15px;
         }
-
+        
         .highlight-word-orange {
             background: linear-gradient(120deg, rgba(236, 103, 45, 0.4) 0%, rgba(214, 68, 39, 0.3) 100%);
             padding: 2px 4px;
@@ -432,44 +393,7 @@
             font-weight: 600;
         }
 
-        .role-tag {
-            padding: 4px 10px;
-            border-radius: 15px;
-            font-weight: 500;
-            font-size: 0.8rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .niche-tag {
-            background: #c1d7eb;
-            color: #2d3748;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .question-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .question-tag {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(5px);
-            color: #2d3748;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
+        /* --- Services Section --- */
         .services-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -495,10 +419,7 @@
         .service-card.premium::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
             background: linear-gradient(135deg, #ec672d, #d64427);
             border-radius: 17px;
             z-index: -1;
@@ -506,45 +427,29 @@
             opacity: 0.3;
             transition: opacity 0.3s ease;
         }
-
-        .service-card.premium:hover::before {
-            opacity: 0;
+        
+        .service-card.premium:hover::before { opacity: 0; }
+        .service-title { font-size: 1.3rem; font-weight: 600; color: #2d3748; margin-bottom: 15px; }
+        .service-description { color: #4a5568; margin-bottom: 20px; font-size: 0.95rem; }
+        .service-duration { color: #ec672d; font-weight: 500; margin: 10px 0; }
+        .service-price { font-size: 1.2rem; font-weight: 700; color: #2d3748; margin: 15px 0; }
+        .service-note { font-size: 0.9rem; color: #6b7280; font-weight: 400; margin-top: 10px; line-height: 1.4; }
+        
+        .service-details-list {
+            margin: 5px 0 0 20px;
+            padding-left: 0;
+            list-style: disc;
         }
-
-        .service-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 15px;
-        }
-
-        .service-description {
+        
+        .service-details-list--secondary {
             color: #4a5568;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 10px 0 0 20px;
         }
+        
+        .service-details-list li, .service-details-list--secondary li { margin-bottom: 8px; }
 
-        .service-duration {
-            color: #ec672d;
-            font-weight: 500;
-            margin: 10px 0;
-        }
-
-        .service-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin: 15px 0;
-        }
-
-        .service-note {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-weight: 400;
-            margin-top: 10px;
-            line-height: 1.4;
-        }
-
+        /* --- CTA & Contact --- */
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #ec672d 0%, #d64427 100%);
@@ -555,19 +460,12 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(236, 103, 45, 0.4);
+            margin-top: 15px;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(236, 103, 45, 0.6);
-        }
-
-        .contact-info {
-            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
-            color: white;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 15px;
         }
 
         .contact-link {
@@ -578,14 +476,9 @@
             transition: border-color 0.3s ease;
         }
 
-        .contact-link:hover {
-            border-bottom-color: white;
-        }
+        .contact-link:hover { border-bottom-color: white; }
 
-        .testimonials-section {
-            margin-bottom: 0;
-        }
-
+        /* --- Testimonials Section --- */
         .testimonials-carousel {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -602,83 +495,19 @@
             border: 1px solid #e2e8f0;
             position: relative;
         }
+        
+        .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
+        .testimonial-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; display: block; border: 3px solid #c1d7eb; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+        .testimonial-role { font-size: 1.1rem; font-weight: 600; color: #000000; margin-bottom: 15px; }
+        .brand-name { font-family: 'Beni Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #df001d; font-weight: bold; }
+        .brand-name-modi { color: #ec407a; font-weight: bold; }
+        .testimonial-text { color: #4a5568; line-height: 1.6; font-style: italic; }
+        .testimonial-text + .testimonial-text { margin-top: 15px; padding-top: 15px; border-top: 1px solid #e2e8f0; }
+        .testimonial-note { font-size: 0.9rem; color: #6b7280; font-weight: 500; margin-top: 10px; margin-bottom: 15px; font-style: italic; }
+        .testimonial-niche { position: absolute; top: 15px; right: 15px; background: #c1d7eb; color: #2d3748; padding: 4px 8px; border-radius: 12px; font-weight: 600; font-size: 0.7rem; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3); z-index: 1; }
+        .highlight-word { background: linear-gradient(120deg, rgba(193, 215, 235, 0.4) 0%, rgba(155, 184, 212, 0.3) 100%); padding: 2px 4px; border-radius: 3px; font-weight: 600; }
 
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .testimonial-emoji {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            display: block;
-            border: 3px solid #c1d7eb;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-role {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 15px;
-        }
-
-        .brand-name {
-            font-family: 'Beni Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            color: #df001d;
-            font-weight: bold;
-        }
-
-        .brand-name-modi {
-            color: #ec407a;
-            font-weight: bold;
-        }
-
-        .testimonial-text {
-            color: #4a5568;
-            line-height: 1.6;
-            font-style: italic;
-        }
-
-        .testimonial-text + .testimonial-text {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .testimonial-note {
-            font-size: 0.9rem;
-            color: #6b7280;
-            font-weight: 500;
-            margin-top: 10px;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .testimonial-niche {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: #c1d7eb;
-            color: #2d3748;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.7rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            z-index: 1;
-        }
-
+        /* --- Process Images Section --- */
         .process-images-section {
             padding: 40px 40px 20px 40px;
             max-width: 900px;
@@ -704,187 +533,101 @@
         .process-image {
             width: 150px;
             height: 150px;
-            background: #f0f0f0 url('./images/process.png') center/cover no-repeat;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        .process-image:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
+        .process-image:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); }
+        .process-image--step1 { background-image: url('./images/process.png'); }
+        .process-image--step2 { background-image: url('./images/process.png'); }
+        .process-image--step3 { background-image: url('./images/process.png'); }
+        .collaboration-image { background-image: url('./images/collaboration.png'); }
+        .experience-image { background-image: url('./images/experience.png'); }
+        .feedback-image { background-image: url('./images/feedback.png'); }
+        .process-caption { font-size: 1rem; font-weight: 500; color: #6b7280; text-align: center; font-style: italic; }
 
-        .collaboration-image {
-            background: #f0f0f0 url('./images/collaboration.png') center/cover no-repeat;
-        }
-
-        .experience-image {
-            background: #f0f0f0 url('./images/experience.png') center/cover no-repeat;
-        }
-
-        .feedback-image {
-            background: #f0f0f0 url('./images/feedback.png') center/cover no-repeat;
-        }
-
-        .process-caption {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #6b7280;
+        /* --- Footer & Final CTA --- */
+        .final-cta-section {
             text-align: center;
-            font-style: italic;
+            margin-top: 40px;
         }
-
-        .help-cries-section {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin: 25px 0;
-            padding: 20px 40px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .help-cries-image {
-            flex: 1;
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            z-index: 2;
-            position: relative;
-            background: #f0f0f0;
-            object-fit: cover;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .process-images-section {
-                padding: 20px 20px 10px 20px;
-            }
-
-            .process-images-container {
-                gap: 15px;
-            }
-
-            .process-item {
-                gap: 10px;
-            }
-
-            .process-image {
-                width: 80px;
-                height: 80px;
-                border-radius: 10px;
-            }
-
-            .process-caption {
-                font-size: 0.8rem;
-            }
-
-            .help-cries-section {
-                gap: 10px;
-                margin: 20px 0;
-                padding: 20px 20px;
-            }
-            
-            .help-cries-item {
-                gap: 10px;
-                width: calc((100% - 20px) / 3);
-            }
-            
-            .help-cries-image {
-                background-size: cover;
-            }
-
-            .help-cries-caption {
-                font-size: 0.8rem;
-            }
-            
-            .testimonials-carousel {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
         
-            .container {
-                padding: 10px;
-            }
+        .final-cta-button {
+            font-size: 1.1rem;
+            padding: 15px 30px;
+        }
+        
+        .final-contact-card {
+            background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%);
+            color: white;
+            border: none;
+            margin: 40px 0 0;
+        }
+        
+        .final-contact-card p { margin-top: 15px; }
+        .final-contact-card p:first-child { margin-top: 0; }
+        .final-contact-card .contact-note { margin-top: 10px; font-size: 0.9rem; opacity: 0.9; }
+
+        .footer-photos {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px 0 40px 0;
+        }
+        
+        /* --- Utility classes created from inline styles --- */
+        .margin-top-20 { margin-top: 20px; }
+        .margin-top-25 { margin-top: 25px; }
+        .margin-top-40 { margin-top: 40px; }
+        .margin-left-25 { margin-left: 25px; }
+        .margin-bottom-8 { margin-bottom: 8px; }
+        .font-size-1-5rem { font-size: 1.5rem; }
+        .margin-10-0-15-0 { margin: 10px 0 15px 0; }
+        .margin-15-0-5-0 { margin: 15px 0 5px 0; }
+        .text-color-premium { color: #ec672d; }
+        .font-weight-600 { font-weight: 600; }
+        .disclaimer-note { font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic; }
+        .flex-container { display: flex; gap: 10px; flex-wrap: wrap; }
+        .role-tag { padding: 4px 10px; border-radius: 15px; font-weight: 500; font-size: 0.8rem; box-shadow: 0 2px 8px rgba(0,0,0,.08); background: #c1d7eb; color: #2d3748; }
+        .logo-image { max-width: 100%; height: auto; }
+        .mars-logo { width: 114px; }
+        .physicle-logo { width: 140px; }
+        
+        /* --- Refined section paddings/margins --- */
+        .section.services-section { padding-top: 10px; }
+        .section.testimonials-section { margin-bottom: 0; }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .about-section, .section { padding: 20px; }
+            .section.services-section, .section:nth-of-type(2) { padding-top: 10px; }
+            .section.testimonials-section, .section:nth-of-type(3) { padding-top: 25px; }
             
-            .about-section {
-                padding: 20px;
-            }
+            .header { padding: 30px 20px; }
+            .header-content { flex-direction: column; align-items: flex-start; }
+            .profile-photos { gap: 10px; justify-content: center; }
+            .profile-image { width: 60px; height: 60px; border-width: 2px; }
+            .name { font-size: 2rem; }
+            .title { font-size: 1.2rem; }
             
-            .section {
-                padding: 20px 20px;
-            }
-
-            /* "форматы работы" - уменьшаем */
-            .section:nth-of-type(2) {
-                padding-top: 10px;
-            }
-
-            /* "отзывы" - увеличиваем */
-            .section:nth-of-type(3) {
-                padding-top: 25px;
-            }
+            .section-title { font-size: 1.8rem; }
+            .experience-item { margin-bottom: 30px; }
+            .experience-item .section-subtitle { font-size: 1.3rem; }
+            .quote-message { max-width: 90%; }
             
-            .header {
-                padding: 30px 20px;
-            }
-
-            .header-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .profile-photos {
-                gap: 10px;
-                justify-content: center;
-            }
-
-            .profile-image {
-                width: 60px;
-                height: 60px;
-                border-width: 2px;
-            }
+            .services-grid { gap: 25px; }
+            .testimonials-carousel { grid-template-columns: 1fr; gap: 20px; }
             
-            .name {
-                font-size: 2rem;
-            }
-
-            .title {
-                font-size: 1.2rem;
-            }
-            
-            .services-grid {
-                gap: 25px;
-            }
-
-            .quote-message {
-                max-width: 90%;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .experience-item {
-                margin-bottom: 30px;
-            }
-
-            .experience-item .section-subtitle {
-                font-size: 1.3rem;
-            }
+            .process-images-section { padding: 20px 20px 10px 20px; }
+            .process-images-container { gap: 15px; }
+            .process-item { gap: 10px; }
+            .process-image { width: 80px; height: 80px; border-radius: 10px; }
+            .process-caption { font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -900,7 +643,7 @@
                     </div>
                     <div class="header-text">
                         <h1 class="name">Алина Косоветис</h1>
-                        <p class="title">Консультант по маркетингу и бизнес-трекер<br><span style="color: #ec672d;">Нахожу точки роста и веду к результату</span></p>
+                        <p class="title">Консультант по маркетингу и бизнес-трекер<br><span class="title-highlight">Нахожу точки роста и веду к результату</span></p>
                         
                         <div class="tag-blocks">
                             <div class="tag-block">🧠 ENTP</div>
@@ -937,15 +680,15 @@
                     
                     <div class="client-examples">
                         <h4 class="section-subtitle">С кем я уже работаю:</h4>
-                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
-                            <div class="niche-tag" style="font-weight: 700;"><strong>FMCG</strong></div>
-                            <div class="niche-tag" style="font-weight: 700;"><strong>Beauty</strong></div>
-                            <div class="niche-tag" style="font-weight: 700;"><strong>EdTech</strong></div>
-                            <div class="niche-tag" style="font-weight: 700;"><strong>Health&Wellbeing</strong></div>
-                            <div class="niche-tag" style="font-weight: 700;"><strong>Mental Health</strong></div>
+                        <div class="niche-tags-container">
+                            <div class="niche-tag">FMCG</div>
+                            <div class="niche-tag">Beauty</div>
+                            <div class="niche-tag">EdTech</div>
+                            <div class="niche-tag">Health&Wellbeing</div>
+                            <div class="niche-tag">Mental Health</div>
                         </div>
-                        <div style="margin-top: 25px; font-size: 0.95rem; color: #6b7280; line-height: 1.6;">
-                            <div style="margin-bottom: 8px;">
+                        <div class="margin-top-25" style="font-size: 0.95rem; color: #6b7280; line-height: 1.6;">
+                            <div class="margin-bottom-8">
                                 <strong style="color: #2d3748;">масштаб:</strong> от соло-экспертов до лидеров ниши
                             </div>
                             <div>
@@ -954,7 +697,7 @@
                         </div>
                     </div>
 
-                    <h4 class="section-subtitle" style="margin-top: 40px; margin-left: 25px;">Слово клиентам:</h4>
+                    <h4 class="section-subtitle margin-top-40 margin-left-25">Слово клиентам:</h4>
                     <div class="quotes-container">
                         <div class="quote-bubble">
                             <div class="quote-emoji">📈</div>
@@ -990,16 +733,16 @@
 
                     <div class="highlight-box">
                         <h4 class="section-subtitle">То есть ко мне приходят с запросами по:</h4>
-                        <ul style="margin-left: 20px; margin-top: 15px; line-height: 1.8;">
-                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Маркетингу</span><br>
+                        <ul class="highlight-list">
+                            <li><span class="highlight-word-orange">Маркетингу</span><br>
                             Разбираемся, как сделать так, чтобы о вас узнавали новые клиенты и не забывали старые. Ищем работающие связки, которые приносят прибыль.</li>
-                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Продуктам и услугам</span><br>
+                            <li><span class="highlight-word-orange">Продуктам и услугам</span><br>
                             Анализируем, что именно вы продаете. Находим сильные стороны ваших продуктов, делаем их более понятными для клиента и эффективными для вас.</li>
-                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Развитию команды</span><br>
+                            <li><span class="highlight-word-orange">Развитию команды</span><br>
                             Как организовать работу и помочь ключевым людям вырасти в настоящих профессионалов.</li>
-                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Структуре и процессам</span><br>
+                            <li><span class="highlight-word-orange">Структуре и процессам</span><br>
                             Помогаю перестать «тушить пожары» и начать работать системно, опираясь на план и целевые метрики.</li>
-                            <li style="margin-bottom: 15px;"><span class="highlight-word-orange">Развитию бизнеса</span><br>
+                            <li><span class="highlight-word-orange">Развитию бизнеса</span><br>
                             Ответ на то самое: «что делать?», «за что хвататься?» и «куда дальше?». Ищем точки роста и строим план по достижению целей (даже самых амбициозных).</li>
                         </ul>
                     </div>
@@ -1008,32 +751,32 @@
                 <div class="process-images-section">
                     <div class="process-images-container">
                         <div class="process-item">
-                            <div class="process-image"></div>
+                            <div class="process-image process-image--step1"></div>
                             <div class="process-caption">изучаю<br>запрос</div>
                         </div>
                         <div class="process-item">
-                            <div class="process-image"></div>
+                            <div class="process-image process-image--step2"></div>
                             <div class="process-caption">провожу<br>исследование</div>
                         </div>
                         <div class="process-item">
-                            <div class="process-image"></div>
+                            <div class="process-image process-image--step3"></div>
                             <div class="process-caption">анализирую<br>метрики</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="section">
+                <div class="section services-section">
                     <h2 class="section-title">Форматы работы и условия</h2>
                     
                     <div class="services-grid">
                         <div class="service-card">
                             <h3 class="service-title">1. Экспресс-консультация</h3>
-                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">⏱️ 📍 🌪️</div>
+                            <div class="font-size-1-5rem margin-10-0-15-0">⏱️ 📍 🌪️</div>
                             <p class="service-description">
                                 <strong>Отличный вариант для небольших точечных запросов</strong>
                             </p>
-                            <p style="margin: 15px 0 5px 0;">Например:</p>
-                            <ul style="margin: 5px 0 0 20px;">
+                            <p class="margin-15-0-5-0">Например:</p>
+                            <ul class="service-details-list">
                                 <li>аудит резюме или текста вакансии</li>
                                 <li>обратная связь по тексту: для соцсетей, рассылок, посевов в tg, рекламы у блогеров</li>
                                 <li>как организовать маркетинговое исследование: анализ рынков, CustDev, опрос, – и внедрить результаты этих исследований в работу</li>
@@ -1044,50 +787,50 @@
                         </div>
 
                         <div class="service-card">
-                            <h3 class="service-title">2. Консультация <span style="color: #ec672d;">deep-dive</span></h3>
-                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">🔍 🤿 💡</div>
+                            <h3 class="service-title">2. Консультация <span class="text-color-premium">deep-dive</span></h3>
+                            <div class="font-size-1-5rem margin-10-0-15-0">🔍 🤿 💡</div>
                             <p class="service-description">
                                 <strong>Глубокое погружение в вашу задачу для поиска наилучшего решения.</strong>
                             </p>
-                            <p class="service-description" style="margin-top: 20px;">
+                            <p class="service-description margin-top-20">
                                 <strong>Этот формат для вас, если нужно:</strong>
                             </p>
-                            <ul style="margin: 10px 0 0 20px; color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;">Определить вектор развития и найти ответы на вопросы «куда идти?» и «как привлекать клиентов?».</li>
-                                <li style="margin-bottom: 8px;">Найти конкретные способы увеличить продажи и повысить эффективность маркетинга.</li>
-                                <li style="margin-bottom: 8px;">Провести аудит ваших маркетинговых каналов и активностей, чтобы понять, что работает, а что — нет.</li>
-                                <li style="margin-bottom: 8px;">Проанализировать текущие процессы в команде и получить рекомендации по их улучшению.</li>
-                                <li style="margin-bottom: 8px;">Получить независимую экспертизу и второе мнение по вашему плану действий.</li>
+                            <ul class="service-details-list--secondary">
+                                <li>Определить вектор развития и найти ответы на вопросы «куда идти?» и «как привлекать клиентов?».</li>
+                                <li>Найти конкретные способы увеличить продажи и повысить эффективность маркетинга.</li>
+                                <li>Провести аудит ваших маркетинговых каналов и активностей, чтобы понять, что работает, а что — нет.</li>
+                                <li>Проанализировать текущие процессы в команде и получить рекомендации по их улучшению.</li>
+                                <li>Получить независимую экспертизу и второе мнение по вашему плану действий.</li>
                             </ul>
-                            <p class="service-description" style="margin-top: 20px;">
+                            <p class="service-description margin-top-20">
                                 <strong>В результате вы получите:</strong>
                             </p>
-                            <ul style="margin: 10px 0 0 20px; color: #4a5568; line-height: 1.6;">
-                                <li style="margin-bottom: 8px;">Полное понимание, как решить ваш запрос, и что для этого нужно сделать.</li>
-                                <li style="margin-bottom: 8px;"><strong>Пошаговый план действий,</strong> который можно сразу брать в работу.</li>
-                                <li style="margin-bottom: 8px;">Ответы на все ваши вопросы и уверенность в дальнейших шагах.</li>
+                            <ul class="service-details-list--secondary">
+                                <li>Полное понимание, как решить ваш запрос, и что для этого нужно сделать.</li>
+                                <li><strong>Пошаговый план действий,</strong> который можно сразу брать в работу.</li>
+                                <li>Ответы на все ваши вопросы и уверенность в дальнейших шагах.</li>
                             </ul>
-                            <p class="service-description" style="margin-top: 20px;">
+                            <p class="service-description margin-top-20">
                                 <strong>Как проходит работа:</strong> я заранее погружаюсь в ваш проект, а на встрече мы сфокусированно работаем над решением. После консультации я остаюсь на связи, чтобы ответить на уточняющие вопросы.
                             </p>
                             <div class="service-duration">⏱️ Продолжительность: 1,5 часа</div>
                             <div class="service-price">💰 $290 или 23.000₽</div>
                             <a href="https://t.me/kosovetis" class="cta-button">Обсудить формат</a>
-                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
+                            <div class="disclaimer-note">
                                 Разберём ваш запрос, договоримся о деталях
                             </div>
                         </div>
 
                         <div class="service-card premium">
-                            <h3 class="service-title">3. Бизнес-<span style="color: #ec672d;">трекинг</span></h3>
-                            <div style="font-size: 1.5rem; margin: 10px 0 15px 0;">🤝 🚀 🎯</div>
+                            <h3 class="service-title">3. Бизнес-<span class="text-color-premium">трекинг</span></h3>
+                            <div class="font-size-1-5rem margin-10-0-15-0">🤝 🚀 🎯</div>
                             <p class="service-description">
                                 <strong>Полноценно участвую в развитии вашего бизнеса:</strong> вместе строим стратегию, переводим её в чёткий план действий и раз в одну или две недели сверяемся по результатам.
                             </p>
-                            <p class="service-description" style="margin-top: 20px;">
+                            <p class="service-description margin-top-20">
                                 На <strong>регулярных встречах</strong> разбираем успехи, ошибки и новые вопросы, корректируем курс и ставим задачи на следующий спринт.
                             </p>
-                            <p class="service-description" style="margin-top: 20px;">
+                            <p class="service-description margin-top-20">
                                 Между встречами <strong>я остаюсь на связи в чате,</strong> чтобы вы получали поддержку и ответы прямо по ходу работы.
                             </p>
                             <div style="margin: 15px 0; padding: 15px; background: linear-gradient(135deg, #fff3f0 0%, #fce4dd 100%); border-radius: 8px; border: 1px solid #fce4dd;">
@@ -1104,14 +847,14 @@
                                 🔁 Периодичность встреч: еженедельно или раз в 2 недели
                             </div>
                             <div style="margin: 15px 0; color: #4a5568;">
-                                🗓️ Формат предполагает <span style="color: #ec672d; font-weight: 600;">минимум 4 встречи</span>
+                                🗓️ Формат предполагает <span class="text-color-premium font-weight-600">минимум 4 встречи</span>
                             </div>
                             <div class="service-price">💰 от $190 или 15.000₽ за одну встречу</div>
                             <div class="service-note" style="margin-top: 5px; font-style: italic;">
                                 Стоимость определяется в диалоге с вами в зависимости от вашего запроса и целей, а также от частоты встреч и продолжительности сотрудничества
                             </div>
-                            <a href="https://t.me/kosovetis" class="cta-button" style="margin-top: 20px; display: inline-block;">Обсудить формат</a>
-                            <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
+                            <a href="https://t.me/kosovetis" class="cta-button margin-top-20">Обсудить формат</a>
+                            <div class="disclaimer-note">
                                 Разберём ваш запрос, договоримся о деталях
                             </div>
                         </div>
@@ -1140,12 +883,12 @@
                     
                     <div class="experience-item">
                         <h4 class="section-subtitle"><span class="highlight-word-blue">1. Корпоративный фундамент</span></h4>
-                        <div style="margin: 20px 0 2px 0;">
-                            <img src="./images/mars-logo.png" alt="Логотип MARS" style="width: 114px; height: 50px; max-width: 100%; height: auto;">
+                        <div class="margin-20-0-2-0">
+                            <img src="./images/mars-logo.png" alt="Логотип MARS" class="logo-image mars-logo">
                         </div>
-                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 15px 0 20px 0;">
-                            <div class="role-tag" style="background: #c1d7eb; color: #2d3748;">brand manager Коркунов</div>
-                            <div class="role-tag" style="background: #c1d7eb; color: #2d3748;">digital marketing manager Petcare</div>
+                        <div class="flex-container" style="margin: 15px 0 20px 0;">
+                            <div class="role-tag">brand manager Коркунов</div>
+                            <div class="role-tag">digital marketing manager Petcare</div>
                         </div>
                         <div class="experience-details">
                             <p>Этот FMCG-гигант научил меня двум вещам: мыслить системно на огромных масштабах и доводить до финала сложнейшие проекты, не теряя фокус.</p>
@@ -1164,12 +907,12 @@
 
                     <div class="experience-item">
                         <h4 class="section-subtitle"><span class="highlight-word-blue">2. Startup boost</span></h4>
-                        <div style="margin: 20px 0 2px 0;">
-                            <img src="./images/logo.svg" alt="Логотип" style="width: 140px; height: 50px; max-width: 100%; height: auto;">
+                        <div class="margin-20-0-2-0">
+                            <img src="./images/logo.svg" alt="Логотип" class="logo-image physicle-logo">
                         </div>
-                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 15px 0 20px 0;">
-                            <div class="role-tag" style="background: #c1d7eb; color: #2d3748;">deputy CMO</div>
-                            <div class="role-tag" style="background: #c1d7eb; color: #2d3748;">creative director</div>
+                        <div class="flex-container" style="margin: 15px 0 20px 0;">
+                            <div class="role-tag">deputy CMO</div>
+                            <div class="role-tag">creative director</div>
                         </div>
                         <div class="experience-details">
                             <p>Я присоединилась к EdTech стартапу и стала частью команды, которая <strong>вырастила его в 10 раз</strong>. Этот опыт дал мне 360-градусное видение, как строить маркетинг, который драйвит рост бизнеса, а не просто «откручивает бюджет».</p>
@@ -1291,23 +1034,21 @@
                         </div>
                     </div>
                     
-                    <div style="text-align: center; margin-top: 40px;">
-                        <a href="https://t.me/kosovetis" class="cta-button" style="font-size: 1.1rem; padding: 15px 30px;">Хочу с тобой работать</a>
+                    <div class="final-cta-section">
+                        <a href="https://t.me/kosovetis" class="cta-button final-cta-button">Хочу с тобой работать</a>
                     </div>
                     
-                    <div style="margin: 40px 0 0;">
-                        <div class="service-card" style="background: linear-gradient(135deg, #c1d7eb 0%, #9bb8d4 100%); color: white; border: none;">
-                            <p><strong>Если вы не увидели свой запрос на этом сайте или вас терзают сомнения, смогу ли я вам помочь</strong></p>
-                            <p style="margin-top: 15px;">
-                                Пишите мне в Telegram: <a href="https://t.me/kosovetis" style="color: white; text-decoration: none; font-weight: 600; border-bottom: 2px solid rgba(255,255,255,0.3); transition: border-color 0.3s ease;">@kosovetis</a>
-                            </p>
-                            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.9;">
-                                Если пойму, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
-                            </p>
-                        </div>
+                    <div class="service-card final-contact-card">
+                        <p><strong>Если вы не увидели свой запрос на этом сайте или вас терзают сомнения, смогу ли я вам помочь</strong></p>
+                        <p>
+                            Пишите мне в Telegram: <a href="https://t.me/kosovetis" class="contact-link">@kosovetis</a>
+                        </p>
+                        <p class="contact-note">
+                            Если пойму, что вам лучше обратиться к кому-то другому – поделюсь проверенными контактами
+                        </p>
                     </div>
 
-                    <div style="display: flex; justify-content: center; gap: 15px; padding: 30px 0 40px 0;">
+                    <div class="footer-photos">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
                         <img src="./images/profile-1.png" alt="Алина Косоветис" class="profile-image">
