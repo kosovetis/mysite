@@ -507,6 +507,44 @@
         
         .service-details-list li, .service-details-list--secondary li { margin-bottom: 8px; }
 
+        /* --- Currency Switcher --- */
+        .currency-switcher {
+            display: inline-flex;
+            background: #f0f0f0;
+            border-radius: 20px;
+            padding: 4px;
+            margin: 15px 0;
+            gap: 2px;
+            width: fit-content;
+        }
+
+        .service-card.premium .currency-switcher {
+            background: white;
+        }
+
+        .currency-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-width: 40px;
+        }
+
+        .currency-btn.active {
+            background: #ec672d;
+            color: white;
+            box-shadow: 0 2px 4px rgba(236, 103, 45, 0.3);
+        }
+
+        .currency-btn:hover:not(.active) {
+            background: #e0e0e0;
+        }
+
         /* --- CTA & Contact --- */
         .cta-button {
             display: inline-block;
@@ -786,7 +824,15 @@
                                 <li>как организовать маркетинговое исследование: анализ рынков, CustDev, опрос, – и внедрить результаты этих исследований в работу</li>
                             </ul>
                             <div class="service-duration">⏱️ Продолжительность: 30 минут</div>
-                            <div class="service-price">💰 $70 или 5500₽</div>
+                            
+                            <div class="currency-switcher">
+                                <button class="currency-btn active" onclick="switchCurrency(this, 'express', 'usd')">$</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'express', 'rub')">₽</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'express', 'eur')">€</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'express', 'thb')">฿</button>
+                            </div>
+                            
+                            <div class="service-price" id="express-price">💰 $59</div>
                             <a href="https://calendly.com/kossovetis/meet-with-me" class="cta-button">Записаться</a>
                         </div>
 
@@ -818,10 +864,18 @@
                                 <strong>Как проходит работа:</strong> я заранее погружаюсь в ваш проект, а на встрече мы сфокусированно работаем над решением. После консультации я остаюсь на связи, чтобы ответить на уточняющие вопросы.
                             </p>
                             <div class="service-duration">⏱️ Продолжительность: 1,5 часа</div>
-                            <div class="service-price">💰 $290 или 23.000₽</div>
+                            
+                            <div class="currency-switcher">
+                                <button class="currency-btn active" onclick="switchCurrency(this, 'deepdive', 'usd')">$</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'deepdive', 'rub')">₽</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'deepdive', 'eur')">€</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'deepdive', 'thb')">฿</button>
+                            </div>
+                            
+                            <div class="service-price" id="deepdive-price">💰 $290</div>
                             <a href="https://t.me/kosovetis" class="cta-button">Обсудить формат</a>
                             <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
-                                Разберём ваш запрос, договоримся о деталях
+                                Разберём ваш запрос, назначим диагностическую сессию
                             </div>
                         </div>
 
@@ -846,17 +900,22 @@
                                     <li>нашли ответ на вопрос "что делать дальше", определились с приоритетами и стратегией развития, сфокусировались на самом важном</li>
                                 </ul>
                             </div>
-                            <div class="service-duration" style="margin: 15px 0;">⏱️ Продолжительность каждой встречи: 1,5 часа</div>
+                            <div class="service-duration" style="margin: 15px 0;">⏱️ Продолжительность каждой встречи: от 1 часа</div>
                             <div style="margin: 15px 0; color: #4a5568;">
                                 🔁 Периодичность встреч: еженедельно или раз в 2 недели
                             </div>
                             <div style="margin: 15px 0; color: #4a5568;">
                                 🗓️ Формат предполагает <span style="color: #ec672d; font-weight: 600;">минимум 4 встречи</span>
                             </div>
-                            <div class="service-price">💰 от $190 или 15.000₽ за одну встречу</div>
-                            <div class="service-note" style="margin-top: 5px; font-style: italic;">
-                                Стоимость определяется в диалоге с вами в зависимости от вашего запроса и целей, а также от частоты встреч и продолжительности сотрудничества
+                            
+                            <div class="currency-switcher">
+                                <button class="currency-btn active" onclick="switchCurrency(this, 'tracking', 'usd')">$</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'tracking', 'rub')">₽</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'tracking', 'eur')">€</button>
+                                <button class="currency-btn" onclick="switchCurrency(this, 'tracking', 'thb')">฿</button>
                             </div>
+                            
+                            <div class="service-price" id="tracking-price">💰 $600 в месяц</div>
                             <a href="https://t.me/kosovetis" class="cta-button" style="margin-top: 20px; display: inline-block;">Обсудить формат</a>
                             <div style="font-size: 0.9rem; color: #6b7280; margin-top: 10px; font-style: italic;">
                                 Разберём ваш запрос, договоримся о деталях
@@ -1073,5 +1132,43 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Цены для всех сервисов в разных валютах
+        const prices = {
+            express: {
+                usd: '$59',
+                rub: '4,900₽',
+                eur: '€49',
+                thb: '1,900฿'
+            },
+            deepdive: {
+                usd: '$290',
+                rub: '23,000₽',
+                eur: '€260',
+                thb: '10,000฿'
+            },
+            tracking: {
+                usd: '$600 в месяц',
+                rub: '50,000₽ в месяц',
+                eur: '€520 в месяц',
+                thb: '20,000฿ в месяц'
+            }
+        };
+
+        function switchCurrency(button, service, currency) {
+            // Убираем активный класс у всех кнопок в этом переключателе
+            const switcher = button.parentElement;
+            const buttons = switcher.querySelectorAll('.currency-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Добавляем активный класс к нажатой кнопке
+            button.classList.add('active');
+            
+            // Обновляем цену
+            const priceElement = document.getElementById(service + '-price');
+            priceElement.textContent = '💰 ' + prices[service][currency];
+        }
+    </script>
 </body>
 </html>
